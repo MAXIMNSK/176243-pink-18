@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Maxim Savickiy](https://up.htmlacademy.ru/adaptive/18/user/176243).
-* Наставник: `Неизвестно`.
+* Наставник: `Иван Жарков`.
 
 ---
 
