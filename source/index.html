@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
-    test
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+
+<body>
+  <header class='site-header index-header'>
+    <a class='index-header__logo'>
+      <img src='https://via.placeholder.com/150x150' class='index-header__site-logo' width='50' height='50'
+        alt='Промо-сайт приложения PINK'>
+    </a>
+    <nav class='index-header__navigation'>
+      <!-- бургер / кнопка закрыть в зависимости от состояния -->
+      <button class='index-header__popup-initiator' aria-label="вызвать/закрыть навигационное меню"></button>
+      <ul class='header-navigation__list'>
+        <li class='header-navigation__item'>
+          <a href='index.html'>Главная</a>
+        </li>
+        <li class='header-navigation__item'>
+          <a href='gallery.html'>Фотографии</a>
+        </li>
+        <li class='header-navigation__item'>
+          <a href='challenge.html'>Конкурс</a>
+        </li>
+        <li class='header-navigation__item'>
+          <a href='#'>Html Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class='site-main index-main'>
+    <h1 class='index-main__headline visually-hidden'>Раскрась свои серые будни в розовый цвет с приложением PINK!</h1>
+    <!-- блок фоновым контентным изображением / с совместимостью приложения с ОС / кнопкой-ссылкой "скачать"  -->
+    <section class='application'>
+      <h2 class='index-main__headline'>Взгляните на жизнь иначе!</h2>
+      <img src='https://via.placeholder.com/150x150' width='50' height='50' class='application__background-photo'
+        alt='фото здания в цвете серых будней'>
+      <img src='https://via.placeholder.com/150x150' width='50' height='50' class='application__pink-photo'
+        alt='фото здания в розовом цвете в стиле пинк'>
+      <!-- совместимость с ОС -->
+      <div class='application__compatibility'>
+        <a href='#' class='application__download-btn'>Скачать приложение</a>
+        <span class='application__mobile-os--apple'>apple icon</span>
+        <span class='application__mobile-os--android'>android icon</span>
+        <span class='application__mobile-os--windows'>windows icon</span>
+        <p class='application__accessibility'>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
+    </section>
+    <!-- блок с преимуществами -->
+    <section class='advantages'>
+      <h2 class='advantages__headline'>Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
+      <ul class='advantages__description-list'>
+        <li class='advantages__description-item'>
+          <h3>Поднимает настроение</h3>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class='advantages__description-item'>
+          <h3>Меняет мир вокруг</h3>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class='advantages__description-item'>
+          <h3>Заводит новых друзей</h3>
+          <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          <div>
+            <!-- тут будет находиться декоративное изображение телефона как на макете, задаваемое через css -->
+          </div>
+        </li>
+      </ul>
+      <!--
+      </section>
+      <article class='feedback slider'>
+        <ul class='feedback__list slider__list'>
+          <li class='feedback__element slider__element'>
+            <h3>Николай Петров</h3>
+            <p>&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
+          </li>
+        </ul>
+        <div class='slider__switcher-wrapper'>
+          <button class='slider__switcher'>switch</button>
+          <button class='slider__switcher'>switch</button>
+          <button class='slider__switcher'>switch</button>
+        </div>
+      </article>
+      <section class='buy-subscription slider'>
+        <h2 class='buy-subscription__headline visually-hidden'>Прайс на подписку</h2>
+        <table>
+          <tr>
+            <th>Стандарт 3,99 USD</th>
+          </tr>
+          <tr>
+            <td>розовый фильтр</td>
+          </tr>
+          <tr>
+            <td>смайлики</td>
+          </tr>
+          <tr>
+            <td>комментарии</td>
+          </tr>
+        </table>
+        <div class='slider__switcher-wrapper'>
+          <button class='slider__switcher'>switch</button>
+          <button class='slider__switcher'>switch</button>
+          <button class='slider__switcher'>switch</button>
+        </div>
+      </section>
+    -->
+  </main>
+  <footer class='site-footer index-footer'></footer>
+</body>
+
 </html>
