@@ -1,0 +1,26 @@
+// блок-шапка + логотип + бургер (попап инициатор)
+.site-header {
+  background-color: rgba(29, 38, 49, 0.9);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__logo {
+    margin: 22px 20px;
+  }
+
+  &__burger {
+    width: 24px;
+    height: 23px;
+
+    margin: 22px 20px;
+
+    background-image: url(../img/icon-menu-cross.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
