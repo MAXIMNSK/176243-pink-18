@@ -4,85 +4,112 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="site-header">
     <a>
-      <img src="https://via.placeholder.com/150x150" class="logo site-header__logo" width="50" height="50"
+      <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
         alt="Промо-сайт приложения PINK">
     </a>
+    <a href='navigation.html' class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+    <!--
+    <button type="button" class="site-header__popup-initiator site-header__burger"
+      aria-label="вызвать/закрыть навигационное меню"></button>
+    -->
     <nav class="header-navigation">
-      <button type="button" class="header-navigation__popup-initiator"
-        aria-label="вызвать/закрыть навигационное меню"></button>
       <ul class="header-navigation__list">
         <li class="header-navigation__item">
-          <a href="index.html">Главная</a>
+          <a href="index.html" class="header-navigation__link">Главная</a>
         </li>
         <li class="header-navigation__item">
-          <a href="gallery.html">Фотографии</a>
+          <a href="gallery.html" class="header-navigation__link">Фотографии</a>
         </li>
         <li class="header-navigation__item">
-          <a href="challenge.html">Конкурс</a>
+          <a href="challenge.html" class="header-navigation__link">Конкурс</a>
         </li>
         <li class="header-navigation__item">
-          <a href="#">Html Academy</a>
+          <a href="#" class="header-navigation__link">Html Academy</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="site-main">
     <h1 class="site-main__headline visually-hidden">Раскрась свои серые будни в розовый цвет с приложением PINK!</h1>
-    <section class="application">
-      <div class="application__background-photo"></div>
-      <div class="application__wrapper">
-        <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
-        <ul class="application__mobile-list">
-          <li>
-            <a href="https://www.apple.com/ru/ios/app-store/"
-              class="application__mobile-os application__mobile-os--apple">apple icon</a>
-          </li>
-          <li>
-            <a href="https://play.google.com/store?hl=ru"
-              class="application__mobile-os application__mobile-os--android">android icon</a>
-          </li>
-          <li>
-            <a href="https://www.microsoft.com/ru-ru/store/b/home"
-              class="application__mobile-os application__mobile-os--windows">windows icon</a>
-          </li>
-        </ul>
-        <p class="application__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    <section class="introduction">
+      <div class="introduction__content-wrapper">
+        <h2 class="introduction__headline">Взгляните на жизнь иначе</h2>
+        <img src='img/iphone-hand-mobile@1x.png' width='258' height='286' class='introduction__application-use' alt='пример преобразования серой жизни, в жизнь с PINK'>
       </div>
     </section>
-    <section class="advantages">
-      <h2 class="advantages__headline">Устали от серости мегаполиса? Нам есть, что вам предложить!</h2>
-      <ul class="advantages__description-list">
-        <li class="advantages__description-item">
-          <h3>Поднимает настроение</h3>
-          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+    <section class="application">
+      <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
+      <ul class="application__mobile-list">
+        <li class="application__mobile-item">
+          <a href="https://www.apple.com/ru/ios/app-store/"
+            class="application__mobile-os application__mobile-os--apple">ссылка на магазин app-store</a>
         </li>
-        <li class="advantages__description-item">
-          <h3>Меняет мир вокруг</h3>
-          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        <li class="application__mobile-item">
+          <a href="https://play.google.com/store?hl=ru"
+            class="application__mobile-os application__mobile-os--android">ссылка на магазин google play</a>
         </li>
-        <li class="advantages__description-item">
-          <h3>Заводит новых друзей</h3>
-          <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        <li class="application__mobile-item">
+          <a href="https://www.microsoft.com/ru-ru/store/b/home"
+            class="application__mobile-os application__mobile-os--windows">ссылка на магазин microsoft</a>
         </li>
       </ul>
+      <p class="application__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
-    <section class="feedback slider">
-      <ul class="feedback__list slider__list">
-        <li class="feedback__element slider__element">
-          <h3>Николай Петров</h3>
-          <p>&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
-        </li>
-      </ul>
-      <div class="slider__switcher-wrapper">
-        <button type="button" class="slider__switcher" aria-label="показать предыдущий отзыв"></button>
-        <button type="button" class="slider__switcher" aria-label="показать отзыв"></button>
-        <button type="button" class="slider__switcher" aria-label="показать следующий отзыв"></button>
+    <section class="advantages">
+      <h2 class="advantages__headline">
+        <p class="advantages__headline--first-part">Устали от серости мегаполиса?</p>
+        <p class="advantages__headline--second-part">Нам есть, что вам предложить!</p>
+      </h2>
+      <div class="advantages__content-wrapper">
+        <ul class="advantages__description-list">
+          <li class="advantages__description-item">
+            <h3 class="advantages__description-headline">Поднимает настроение</h3>
+            <p class="advantages__description-content">Приложение позволит вам победить осеннюю хандру и депрессию
+              буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages__description-item">
+            <h3 class="advantages__description-headline">Меняет мир вокруг</h3>
+            <p class="advantages__description-content">Сделайте снимок и украсьте его смайликом или текстовой подписью,
+              чтобы усилить эффект</p>
+          </li>
+          <li class="advantages__description-item">
+            <h3 class="advantages__description-headline">Заводит новых друзей</h3>
+            <p class="advantages__description-content">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+              заводите новых</p>
+          </li>
+        </ul>
+        <p class="advantages__iphone-smile"></p>
+      </div>
+    </section>
+    <section class="feedback feedback-slider">
+      <div class="feedback__content-wrapper">
+        <ul class="feedback__list slider__list">
+          <li class="feedback__element slider__element">
+            <h3 class="feedback__user-name">Николай Петров</h3>
+            <p class="feedback__user-comment">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть
+              на привычные серые вещи! А ещё я
+              познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
+          </li>
+        </ul>
+        <div class="feedback-slider__switcher-wrapper">
+          <input type="radio" id="comment-switcher-1" name="switcher comment slider"
+            class="feedback-slider__switcher visually-hidden" aria-label="показать новый отзыв" checked>
+          <label for="comment-switcher-1" class="feedback-slider__switcher feedback-slider__switcher--checked"></label>
+
+          <input type="radio" id="comment-switcher-2" name="switcher comment slider"
+            class="feedback-slider__switcher visually-hidden" aria-label="показать последний отзыв">
+          <label for="comment-switcher-2" class="feedback-slider__switcher"></label>
+
+          <input type="radio" id="comment-switcher-3" name="switcher comment slider"
+            class="feedback-slider__switcher visually-hidden" aria-label="показать предпоследний отзыв">
+          <label for="comment-switcher-3" class="feedback-slider__switcher"></label>
+        </div>
       </div>
     </section>
     <section class="subscription slider">
@@ -110,24 +137,26 @@
     </section>
   </main>
   <footer class="site-footer">
-    <a>
-      <img src="https://via.placeholder.com/150x150" class="logo site-footer__logo" width="50" height="50"
-        alt="Промо-сайт приложения PINK">
-    </a>
-    <ul class="social-list">
-      <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--twitter">twitter</a>
-      </li>
-      <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--facebook">facebook</a>
-      </li>
-      <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--youtube">youtube</a>
-      </li>
-    </ul>
-    <div class="created-by">
-      <span>Разработано</span>
-      <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy logo</a>
+    <div class="site-footer__wrapper">
+      <a href="index.html" class="site-footer__link-logo">
+        <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
+          alt="Промо-сайт приложения PINK">
+      </a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--twitter">ссылка на twitter</a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--facebook">ссылка на facebook</a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--youtube">ссылка на youtube</a>
+        </li>
+      </ul>
+      <div class="created-by">
+        <span class="created-by__text">Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link">HTML Academy logo</a>
+      </div>
     </div>
   </footer>
 </body>

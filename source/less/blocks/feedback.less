@@ -1,0 +1,82 @@
+// блок тега main с каруселью отзывов
+.feedback {
+  display: flex;
+  justify-content: center;
+
+  padding: 40px 0;
+}
+
+.feedback__content-wrapper {
+  width: 276px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__list {
+  .list-style-drop;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__element {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__user-name {
+  color: @f-color-black;
+  font-size: @f-size-18;
+  font-weight: @f-weight-high;
+
+  margin: 0 0 25px 0;
+}
+
+.feedback__user-comment {
+  color: @f-color-main;
+  font-size: @f-size-14;
+  font-weight: @f-weight-normal;
+
+  line-height: 30px;
+
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+// переключатель карусели
+.feedback-slider__switcher-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 10px 0;
+}
+
+.feedback-slider__switcher {
+  border: 3px solid #283645;
+  border-radius: 50%;
+
+  opacity: 0.3;
+
+  &--checked {
+    border: 3px solid #9f1757;
+
+    opacity: 1;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  // добавляем обводку элементу когда он в фокусе, того же цвета как и у других элементов в google chrome
+  &:focus + label {
+    outline: 1px solid #4d90fe;
+  }
+}

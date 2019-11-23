@@ -1,0 +1,34 @@
+// блок в теге header с навигацией по сайту
+.header-navigation {
+  width: 100%;
+
+  margin: 0;
+}
+
+.header-navigation__list {
+  .list-style-drop;
+
+  text-align: center;
+}
+
+.header-navigation__item {
+  width: 100%;
+
+  font-size: @f-size-18;
+  font-weight: @f-weight-high;
+  text-transform: uppercase;
+
+  padding: 18px 0 18px 0;
+
+  box-shadow: 0 -1px 0 0 #000000;
+
+  &:last-child {
+    box-shadow: 0 1px 0 0 #000000, 0 -1px 0 0 #000000;
+  }
+}
+
+.header-navigation__link {
+  color: @f-color-white;
+
+  text-decoration: none;
+}

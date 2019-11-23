@@ -1,0 +1,48 @@
+// блок с ссылками на приложение в социальных сетях
+.social-list {
+  font-size: 0;
+
+  .list-style-drop;
+
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-list__item {
+  margin-right: 17px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list__link {
+  width: 46px;
+  height: 46px;
+
+  background-color: #fefefe;
+
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+
+  display: block;
+
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}

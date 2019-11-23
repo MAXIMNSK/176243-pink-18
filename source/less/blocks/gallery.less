@@ -1,0 +1,122 @@
+// блок-галерея на странице фотографий пользователей
+.gallery {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: @f-color-white;
+}
+
+.gallery__headline {
+  width: 241px;
+
+  font-size: @f-size-14;
+  font-weight: @f-weight-normal;
+  color: @f-color-main;
+
+  line-height: 30px;
+
+  margin: 55px auto;
+}
+
+.gallery__list {
+  width: 320px;
+
+  .list-style-drop;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.gallery__best-photo {
+  color: @f-color-white;
+  font-size: @f-size-12;
+  font-weight: @f-weight-high;
+  text-transform: uppercase;
+
+  background-color: #d22856;
+
+  padding: 12px 20px;
+
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.gallery__content-wrapper {
+  width: 280px;
+
+  padding: 25px 18px 27px 18px;
+  margin-top: -4px;
+
+  background-color: #f2f2f2;
+}
+
+.gallery__username-publication-time {
+  color: @f-color-main;
+  font-size: @f-size-14;
+
+  margin: 0;
+}
+
+.gallery__username {
+  font-weight: @f-weight-high;
+}
+
+.gallery__publication-time {
+  font-weight: @f-weight-low;
+  text-transform: uppercase;
+}
+
+.gallery__comment {
+  color: @f-color-main;
+  font-size: @f-size-12;
+  font-weight: @f-weight-normal;
+
+  line-height: 24px;
+
+  margin: 0;
+}
+
+.gallery__like {
+  position: relative;
+}
+
+.gallery__like-icon {
+  width: 15px;
+  height: 15px;
+
+  background: url("../img/icon-heart.svg");
+  background-size: 13px 12px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  border: none;
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.gallery__like-count {
+  color: @f-color-accent;
+  font-size: @f-size-12;
+  font-weight: @f-weight-normal;
+  text-transform: uppercase;
+
+  margin-left: 30px;
+}
