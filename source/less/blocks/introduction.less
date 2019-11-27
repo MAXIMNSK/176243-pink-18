@@ -1,5 +1,7 @@
 // вступительный приветственный блок тега main
 .introduction {
+  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,7 +31,8 @@
 
   // модификация для страницы с конкурсами
   &--challenge-modification {
-    margin-bottom: -225px;
+    margin: 0px;
+    //margin-bottom: -225px;                         // раскомментировать после наполнения страницы
   }
 }
 
@@ -55,3 +58,30 @@
   bottom: 0;
   left: 0;
 }
+
+@media (min-width: @mobile-width) {
+  .introduction {
+    width: @mobile-width;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .introduction {
+    width: @tablet-width;
+  }
+
+  .introduction__headline {
+    font-size: @f-size-40;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduction {
+    width: @desktop-width;
+  }
+
+  .introduction__headline {
+    font-size: @f-size-50;
+  }
+}
+

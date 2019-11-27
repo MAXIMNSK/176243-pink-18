@@ -20,3 +20,30 @@
 .site-footer__link-logo {
   margin-bottom: 40px;
 }
+
+@media (min-width: @mobile-width) {
+  .site-footer__wrapper {
+    width: @mobile-width;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-footer__wrapper {
+    width: @tablet-width;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .site-footer__link-logo {
+    margin: 0px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-footer__wrapper {
+    width: @desktop-width;
+  }
+}
+
