@@ -38,14 +38,13 @@
   background-position: 50%;
 }
 
-@media (min-width: @mobile-width), (max-width: @mobile-width) {
+@media (min-width: @mobile-width) {
   .site-header__wrapper {
     width: @mobile-width;
   }
 }
 
 @media (min-width: @tablet-width) {
-
   .site-header__wrapper {
     width: @tablet-width;
     min-height: 110px;
@@ -63,11 +62,10 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .site-header__wrapper {
     width: @desktop-width;
 
-    margin: 0px;
+    margin: 0;
 
     flex-wrap: nowrap;
   }
