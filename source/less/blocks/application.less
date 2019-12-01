@@ -1,14 +1,28 @@
 // блок тега main с сылкой на приложение в интернет-магазинах, информация о совместимости с ОС
 .application {
-  color: @f-color-white;
+  width: 100%;
 
   background-color: #1d2631;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  outline: 3px solid red;                     // delete
+}
+
+.application__wrapper {
+  width: @mobile-width;
+
+  color: @f-color-white;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 28px 0 35px 0;
+  padding: 28px 20px 35px 20px;
+
+  outline: 2px solid gold;                          // delete
 }
 
 .application__download-btn {
@@ -23,6 +37,8 @@
 
   border: 3px solid #ffffff;
   border-radius: 30px;
+
+  outline: 1px solid lime;                              // delete
 }
 
 .application__mobile-list {
@@ -33,6 +49,8 @@
   justify-content: space-around;
 
   .list-style-drop;
+
+  outline: 1px solid lime;                              // delete
 }
 
 .application__mobile-item {
@@ -74,22 +92,13 @@
   font-weight: @f-weight-low;
 
   text-align: center;
-}
 
-@media (min-width: @mobile-width) {
-  .application {
-    width: @mobile-width;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .application {
-    width: @tablet-width;
-  }
+  outline: 1px solid lime;                              // delete
 }
 
 @media (min-width: @desktop-width) {
   .application {
-    width: @desktop-width;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }

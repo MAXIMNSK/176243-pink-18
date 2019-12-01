@@ -1,10 +1,14 @@
 // блок с преимуществами нашего приложения
 .advantages {
+  width: 100%;
+
   padding: 45px 0 0 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  outline: 3px solid yellowgreen;                     // delete
 }
 
 .advantages__headline {
@@ -23,33 +27,51 @@
   flex-direction: column;
   align-items: center;
 
+  outline: 2px solid gold;                            // delete
+
   &--first-part {
     margin-bottom: 30px;
   }
 }
 
-.advantages__content-wrapper {
+.advantages__background-wrapper {
   width: 100%;
-
-  padding-top: 90px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   background-color: #f2f2f2;
+
+  outline: 1px solid red;                                   // delete
+}
+
+.advantages__content-wrapper {
+  width: @mobile-width;
+
+  padding: 90px 20px 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  outline: 2px solid gold;                              // delete
 }
 
 .advantages__description-list {
-  width: 252px;
+  width: 100%;
 
   .list-style-drop;
 
   margin-bottom: 40px;
+
+  outline: 1px solid red;                                 // delete
 }
 
 .advantages__description-item {
   text-align: center;
+
+  outline: 1px solid black;                                 // delete
 
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -87,17 +109,7 @@
   background-position: 50% 0%;
 }
 
-@media (min-width: @mobile-width) {
-  .advantages {
-    width: @mobile-width;
-  }
-}
-
 @media (min-width: @tablet-width) {
-  .advantages {
-    width: @tablet-width;
-  }
-
   .advantages__headline {
     width: 585px;
 
@@ -112,8 +124,8 @@
     }
   }
 
-  .advantages__description-list {
-    width: 306px;
+  .advantages__content-wrapper {
+    width: @tablet-width;
   }
 
   .advantages__description-item {
@@ -122,13 +134,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages {
-    width: @desktop-width;
-  }
-
   .advantages__headline {
     width: 731px;
 
     font-size: @f-size-50;
+  }
+
+  .advantages__content-wrapper {
+    width: @desktop-width;
+
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
