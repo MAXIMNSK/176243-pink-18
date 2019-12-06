@@ -1,13 +1,22 @@
 // блок-галерея на странице фотографий пользователей
 .gallery {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-color: @f-color-white;
+  // накрываем блок application блоком gallery
+  margin-top: -285px;
+}
+
+.gallery__wrapper {
+  width: @mobile-width;
+
+  background-color: #ffffff;
+
+  padding: 0 20px;
 }
 
 .gallery__headline {
@@ -16,6 +25,7 @@
   font-size: @f-size-14;
   font-weight: @f-weight-normal;
   color: @f-color-main;
+  text-align: center;
 
   line-height: 30px;
 
@@ -23,7 +33,7 @@
 }
 
 .gallery__list {
-  width: @mobile-width;
+  width: 100%;
 
   .list-style-drop;
 
@@ -58,9 +68,11 @@
 }
 
 .gallery__content-wrapper {
-  width: 280px;
+  width: 100%;
 
-  padding: 25px 18px 27px 18px;
+  position: relative;
+
+  padding: 25px 18px 25px 18px;
   margin-top: -4px;
 
   background-color: #f2f2f2;
@@ -83,6 +95,8 @@
 }
 
 .gallery__comment {
+  width: 100%;
+
   color: @f-color-main;
   font-size: @f-size-12;
   font-weight: @f-weight-normal;
@@ -94,6 +108,8 @@
 
 .gallery__like {
   position: relative;
+
+  margin-top: 10px;
 }
 
 .gallery__like-icon {
@@ -122,13 +138,108 @@
 }
 
 @media (min-width: @tablet-width) {
-  .gallery {
+  .gallery__wrapper {
     width: @tablet-width;
+  }
+
+  .gallery__headline {
+    width: 100%;
+
+    font-size: @f-size-18;
+
+    padding: 0 100px;
+  }
+
+  .gallery__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: 300px;
+
+    &--panorama {
+      width: 100%;
+
+      margin-bottom: 50px;
+    }
+  }
+
+  .gallery__content-wrapper {
+    width: 100%;
+    min-height: 155px;
+
+    &--panorama {
+      width: 620px;
+      min-height: auto;
+
+      position: relative;
+    }
+  }
+
+  .gallery__like {
+    width: 100%;
+
+    padding: 0 20px;
+
+    margin: 0;
+
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &--panorama {
+      width: auto;
+      height: max-content;
+
+      justify-content: flex-start;
+
+      top: 25px;
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .gallery__like-icon {
+    position: static;
+
+    &--panorama {
+      position: static;
+    }
+  }
+
+  .gallery__like-count {
+    line-height: 18px;
+
+    margin: 0;
+
+    &--panorama {
+      line-height: 18px;
+
+      margin: 0 10px 0 0;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .gallery {
+  .gallery__wrapper {
     width: @desktop-width;
+
+    padding: 0 10px;
+  }
+
+  .gallery__headline {
+    width: 100%;
+
+    padding: 0 200px;
+  }
+
+  .gallery__content-wrapper {
+    width: 100%;
   }
 }

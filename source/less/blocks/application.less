@@ -1,28 +1,68 @@
 // блок тега main с сылкой на приложение в интернет-магазинах, информация о совместимости с ОС
 .application {
   width: 100%;
+  min-height: 462px;
 
-  background-color: #1d2631;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  outline: 3px solid red;                     // delete
-}
-
-.application__wrapper {
-  width: @mobile-width;
-
-  color: @f-color-white;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.application__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+.application__introduction {
+  width: @mobile-width;
+  min-height: 462px;
+
+  padding: 0 20px;
+
+  position: relative;
+}
+
+.application__headline {
+  width: 100%;
+
+  color: @f-color-white;
+  font-size: @f-size-24;
+  font-weight: @f-weight-low;
+
+  text-align: center;
+  line-height: 1.2;
+
+  margin: 95px 0 0 0;
+  padding: 0 35px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.application__use {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.application__content-wrapper {
+  width: @mobile-width;
+
+  background-color: #1d2631;
 
   padding: 28px 20px 35px 20px;
 
-  outline: 2px solid gold;                          // delete
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .application__download-btn {
@@ -37,8 +77,6 @@
 
   border: 3px solid #ffffff;
   border-radius: 30px;
-
-  outline: 1px solid lime;                              // delete
 }
 
 .application__mobile-list {
@@ -49,8 +87,6 @@
   justify-content: space-around;
 
   .list-style-drop;
-
-  outline: 1px solid lime;                              // delete
 }
 
 .application__mobile-item {
@@ -92,13 +128,82 @@
   font-weight: @f-weight-low;
 
   text-align: center;
+}
 
-  outline: 1px solid lime;                              // delete
+@media (min-width: @tablet-width) {
+  .application {
+    min-height: 729px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  .application__introduction {
+    width: @tablet-width;
+    min-height: 729px;
+  }
+
+  .application__headline {
+    width: 300px;
+
+    font-size: @f-size-40;
+
+    padding: 0 40px;
+
+    margin-top: 200px;
+
+    &--gallery {
+      width: 100%;
+
+      font-size: @f-size-50;
+
+      position: static;
+
+      margin: 180px 0 0 0;
+      padding: 0 50px;
+    }
+  }
+
+  .application__content-wrapper {
+    width: 300px;
+
+    position: absolute;
+    top: 350px;
+    left: 20px;
+
+    background-color: transparent;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .application {
+    min-height: 853px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .application__introduction {
+    width: @desktop-width;
+    min-height: 853px;
+
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .application__headline {
+    font-size: @f-size-50;
+
+    margin-top: 220px;
+
+    &--gallery {
+      padding: 0 200px;
+    }
+  }
+
+  .application__content-wrapper {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    top: 400px;
+    left: 10px;
   }
 }

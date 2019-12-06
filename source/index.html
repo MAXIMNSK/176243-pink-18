@@ -11,7 +11,7 @@
 <body>
   <header class="site-header">
     <div class="site-header__wrapper">
-      <div class='site-header__hat'>
+      <div class="site-header__hat">
         <a>
           <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
             alt="Промо-сайт приложения PINK">
@@ -38,32 +38,31 @@
   </header>
   <main class="site-main">
     <h1 class="site-main__headline visually-hidden">Раскрась свои серые будни в розовый цвет с приложением PINK!</h1>
-    <section class="introduction">
-      <div class="introduction__content-wrapper">
-        <h2 class="introduction__headline">Взгляните на жизнь иначе</h2>
-        <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" class="introduction__application-use"
-          alt="пример преобразования серой жизни, в жизнь с PINK">
-      </div>
-    </section>
     <section class="application">
-      <div class='application__wrapper'>
-        <h2 class='application__headline visually-hidden'>Доступность приложения</h2>
-        <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
-        <ul class="application__mobile-list">
-          <li class="application__mobile-item">
-            <a href="https://www.apple.com/ru/ios/app-store/"
-              class="application__mobile-os application__mobile-os--apple">ссылка на магазин app-store</a>
-          </li>
-          <li class="application__mobile-item">
-            <a href="https://play.google.com/store?hl=ru"
-              class="application__mobile-os application__mobile-os--android">ссылка на магазин google play</a>
-          </li>
-          <li class="application__mobile-item">
-            <a href="https://www.microsoft.com/ru-ru/store/b/home"
-              class="application__mobile-os application__mobile-os--windows">ссылка на магазин microsoft</a>
-          </li>
-        </ul>
-        <p class="application__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="application__wrapper">
+        <div class="application__introduction">
+          <h2 class="application__headline">Взгляните на жизнь иначе</h2>
+          <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" class="application__use"
+            alt="пример преобразования серой жизни, в жизнь с PINK">
+        </div>
+        <div class="application__content-wrapper">
+          <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
+          <ul class="application__mobile-list">
+            <li class="application__mobile-item">
+              <a href="https://www.apple.com/ru/ios/app-store/"
+                class="application__mobile-os application__mobile-os--apple">ссылка на магазин app-store</a>
+            </li>
+            <li class="application__mobile-item">
+              <a href="https://play.google.com/store?hl=ru"
+                class="application__mobile-os application__mobile-os--android">ссылка на магазин google play</a>
+            </li>
+            <li class="application__mobile-item">
+              <a href="https://www.microsoft.com/ru-ru/store/b/home"
+                class="application__mobile-os application__mobile-os--windows">ссылка на магазин microsoft</a>
+            </li>
+          </ul>
+          <p class="application__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </section>
     <section class="advantages">
@@ -71,7 +70,7 @@
         <span class="advantages__headline--first-part">Устали от серости мегаполиса?</span>
         <span class="advantages__headline--second-part">Нам есть, что вам предложить!</span>
       </h2>
-      <div class='advantages__background-wrapper'>
+      <div class="advantages__background-wrapper">
         <div class="advantages__content-wrapper">
           <ul class="advantages__description-list">
             <li class="advantages__description-item">
@@ -91,20 +90,44 @@
                 и заводите новых</p>
             </li>
           </ul>
-          <p class="advantages__iphone-smile"></p>
+          <div class="advantages__iphone-wrapper">
+            <p class="advantages__iphone advantages__iphone--gray"></p>
+            <p class="advantages__iphone advantages__iphone--pink"></p>
+            <p class="advantages__iphone advantages__iphone--smile"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="effect-time">
+      <div class="effect-time__wrapper">
+        <span class="effect-time__picture"
+          aria-label="изображение секундомера остановившегося на отметке в 24 часа"></span>
+        <div class="effect-time__content-wrapper">
+          <span class="effect-time__headline">Эффект на 24 часа!</span>
+          <p class="effect-time__context">Британские ученые провели исследования и доказали, что положительный эффект
+            от использования приложения длится целые сутки!</p>
+          <a href="#" class="effect-time__link">Узнать больше об исследовании</a>
         </div>
       </div>
     </section>
     <section class="feedback feedback-slider">
+      <h2 class="feedback visually-hidden">Отзывы наших пользователей</h2>
       <div class="feedback__content-wrapper">
+        <button type="button" class="feedback__arrow feedback__arrow--left"
+          aria-label="показать предыдущий комментарий"></button>
         <ul class="feedback__list slider__list">
           <li class="feedback__element slider__element">
-            <h3 class="feedback__user-name">Николай Петров</h3>
+            <p class="feedback__user">
+              <span class="feedback__user-name">Николай Петров</span>
+              <span class="feedback__user-age-profession">25 лет, водитель трамвая</span>
+            </p>
             <p class="feedback__user-comment">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть
               на привычные серые вещи! А ещё я
               познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
           </li>
         </ul>
+        <button type="button" class="feedback__arrow feedback__arrow--right"
+          aria-label="показать следующий комментарий"></button>
         <div class="feedback-slider__switcher-wrapper">
           <input type="radio" id="comment-switcher-1" name="switcher comment slider"
             class="feedback-slider__switcher visually-hidden" aria-label="показать новый отзыв" checked>
@@ -145,7 +168,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <div class="site-footer__wrapper">
+    <div class="site-footer__wrapper site-footer__wrapper--index">
       <a href="index.html" class="site-footer__link-logo">
         <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
           alt="Промо-сайт приложения PINK">

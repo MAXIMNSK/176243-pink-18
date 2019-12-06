@@ -6,8 +6,6 @@
   justify-content: center;
 
   padding: 40px 0;
-
-  outline: 3px solid yellowgreen;             // delete
 }
 
 .feedback__content-wrapper {
@@ -19,8 +17,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  outline: 2px solid gold;                                        // delete
 }
 
 .feedback__list {
@@ -39,12 +35,22 @@
   align-items: center;
 }
 
+.feedback__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .feedback__user-name {
   color: @f-color-black;
   font-size: @f-size-18;
   font-weight: @f-weight-high;
 
   margin: 0 0 25px 0;
+}
+
+.feedback__user-age-profession {
+  display: none;
 }
 
 .feedback__user-comment {
@@ -56,6 +62,10 @@
 
   padding: 0;
   margin: 0 0 20px 0;
+}
+
+.feedback__arrow {
+  display: none;
 }
 
 // переключатель карусели
@@ -94,13 +104,87 @@
   .feedback__content-wrapper {
     width: @tablet-width;
   }
+
+  .feedback__element {
+    flex-direction: column-reverse;
+  }
+
+  .feedback__user {
+    margin: 0 0 20px 0;
+  }
+
+  .feedback__user-name {
+    font-size: @f-size-20;
+  }
+
+  .feedback__user-age-profession {
+    color: @f-color-main;
+    font-size: @f-size-14;
+    font-weight: @f-weight-normal;
+
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .feedback__content-wrapper {
     width: @desktop-width;
 
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 100px 10px 0 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-image: url("../img/icon-quotes.svg");
+    background-size: 79px 63px;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+  }
+
+  .feedback__list {
+    width: 685px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .feedback__user-name {
+    font-size: @f-size-24;
+  }
+
+  .feedback__user-age-profession {
+    font-size: @f-size-18;
+  }
+
+  .feedback__user-comment {
+    font-size: @f-size-18;
+  }
+
+  .feedback-slider__switcher-wrapper {
+    display: none;
+  }
+
+  .feedback__arrow {
+    width: 30px;
+    height: 50px;
+
+    display: block;
+
+    border: none;
+
+    background-size: 22px 41px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    background-color: transparent;
+
+    &--left {
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &--right {
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
   }
 }

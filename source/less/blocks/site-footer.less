@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
-  outline: 3px solid yellowgreen;                                     // delete
 }
 
 .site-footer__wrapper {
@@ -18,7 +16,9 @@
   flex-direction: column;
   align-items: center;
 
-  outline: 2px solid gold;                                // delete
+  &--index {
+    display: none;
+  }
 }
 
 .site-footer__link-logo {
@@ -32,6 +32,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &--index {
+      display: flex;
+    }
   }
 
   .site-footer__link-logo {
