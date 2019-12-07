@@ -32,3 +32,23 @@
 
   text-decoration: none;
 }
+
+@media (min-width: @desktop-width) {
+  .header-navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-navigation__item {
+    font-weight: @f-weight-normal;
+
+    text-transform: capitalize;
+
+    box-shadow: none;
+
+    &:last-child {
+      box-shadow: inherit;
+    }
+  }
+}

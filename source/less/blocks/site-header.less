@@ -1,16 +1,28 @@
 // блок-шапка + логотип + бургер (попап инициатор)
 .site-header {
-  background-color: rgba(40, 54, 69, 0.9);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: @f-color-main;
+}
+
+.site-header__hat {
+  width: 100%;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+
+  padding: 20px 20px 25px 20px;
 }
 
-.site-header__logo {
-  margin: 22px 20px;
+.site-header__wrapper {
+  width: @mobile-width;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-header__burger {
@@ -19,8 +31,6 @@
 
   font-size: 0;
 
-  margin: 22px 20px;
-
   border: none;
 
   background-color: transparent;
@@ -28,4 +38,39 @@
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .site-header__wrapper {
+    width: @tablet-width;
+    min-height: 110px;
+  }
+
+  .site-header__hat {
+    padding: 27px 20px 40px 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-header__wrapper {
+    width: @desktop-width;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 25px 10px 40px 10px;
+  }
+
+  .site-header__hat {
+    width: auto;
+
+    padding: 0;
+  }
+
+  .site-header__burger {
+    display: none;
+  }
 }

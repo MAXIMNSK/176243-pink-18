@@ -1,5 +1,7 @@
 // блок с информацией о фирме написавшей сайт
 .created-by {
+  width: min-content;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,4 +26,16 @@
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .created-by__text {
+    font-size: @f-size-18;
+  }
 }

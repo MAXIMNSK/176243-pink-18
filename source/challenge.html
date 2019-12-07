@@ -3,44 +3,47 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="site-header">
-    <a href="index.html">
-      <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
-        alt="Промо-сайт приложения PINK">
-    </a>
-    <a href='navigation.html' class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
-    <!--
-    <button type="button" class="site-header__popup-initiator site-header__burger"
-      aria-label="вызвать/закрыть навигационное меню"></button>
-    -->
-    <nav class="header-navigation">
-      <ul class="header-navigation__list">
-        <li class="header-navigation__item">
-          <a href="index.html" class="header-navigation__link">Главная</a>
-        </li>
-        <li class="header-navigation__item">
-          <a href="gallery.html" class="header-navigation__link">Фотографии</a>
-        </li>
-        <li class="header-navigation__item">
-          <a href="challenge.html" class="header-navigation__link">Конкурс</a>
-        </li>
-        <li class="header-navigation__item">
-          <a href="#" class="header-navigation__link">Html Academy</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="site-header__wrapper">
+      <div class="site-header__hat">
+        <a>
+          <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
+            alt="Промо-сайт приложения PINK">
+        </a>
+        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__item">
+            <a href="index.html" class="header-navigation__link">Главная</a>
+          </li>
+          <li class="header-navigation__item">
+            <a href="gallery.html" class="header-navigation__link">Фотографии</a>
+          </li>
+          <li class="header-navigation__item">
+            <a href="challenge.html" class="header-navigation__link">Конкурс</a>
+          </li>
+          <li class="header-navigation__item">
+            <a href="#" class="header-navigation__link">Html Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="site-main">
     <h1 class="site-main__headline visually-hidden">Страница регистрации в конкурсе</h1>
-    <section class="introduction">
-      <div class="introduction__content-wrapper introduction__content-wrapper--challenge-modification">
-        <h2 class="introduction__headline introduction__headline--challenge-modification">Конкурс на самое безбашенное
-          путешествие с Пинк</h2>
+    <section class="application">
+      <div class="application__wrapper">
+        <div class="application__introduction">
+          <h2 class="application__headline application__headline--gallery">Конкурс на самое безбашенное путешествие с
+            Пинк</h2>
+        </div>
       </div>
     </section>
   </main>
