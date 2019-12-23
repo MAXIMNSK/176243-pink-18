@@ -12,22 +12,26 @@
   <header class="site-header">
     <div class="site-header__wrapper">
       <div class="site-header__hat">
-        <a>
+        <!-- if this page != index-page, then add attribute link to index-page -->
+        <a href="index.html">
           <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
             alt="Промо-сайт приложения PINK">
         </a>
-        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+        <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
+            <!-- if this === index-page, then del attribute href -->
             <a href="index.html" class="header-navigation__link">Главная</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === gallery-page, then del attribute href -->
             <a href="gallery.html" class="header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
-            <a href="challenge.html" class="header-navigation__link">Конкурс</a>
+            <!-- if this === challenge-page, then del attribute href -->
+            <a class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
             <a href="#" class="header-navigation__link">Html Academy</a>
@@ -70,6 +74,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

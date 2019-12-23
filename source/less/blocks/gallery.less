@@ -1,5 +1,7 @@
 // блок-галерея на странице фотографий пользователей
 .gallery {
+  width: 100%;
+
   position: relative;
   z-index: 0;
 
@@ -7,8 +9,35 @@
   flex-direction: column;
   align-items: center;
 
+  background-color: #ffffff;
+
   // накрываем блок application блоком gallery
-  margin-top: -285px;
+  margin-top: -220px;
+}
+
+.gallery__panorama {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.gallery__best-photo {
+  color: @f-color-white;
+  font-size: @f-size-12;
+  font-weight: @f-weight-high;
+  text-transform: uppercase;
+
+  background-color: #d22856;
+
+  padding: 12px 20px;
+
+  position: absolute;
+  top: -137px;
+  right: 0;
 }
 
 .gallery__wrapper {
@@ -52,21 +81,6 @@
   margin-bottom: 20px;
 }
 
-.gallery__best-photo {
-  color: @f-color-white;
-  font-size: @f-size-12;
-  font-weight: @f-weight-high;
-  text-transform: uppercase;
-
-  background-color: #d22856;
-
-  padding: 12px 20px;
-
-  position: absolute;
-  top: 0;
-  right: 20px;
-}
-
 .gallery__content-wrapper {
   width: 100%;
 
@@ -75,7 +89,12 @@
   padding: 25px 18px 25px 18px;
   margin-top: -4px;
 
-  background-color: #f2f2f2;
+  background-color: @bg-color-light;
+
+  &--panorama {
+    // 40 - отступы для мобильного варианта. Взяты из .gallery__wrapper
+    width: @mobile-width - 40;
+  }
 }
 
 .gallery__username-publication-time {
@@ -138,12 +157,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery {
+    margin-top: -285px;
+  }
+
+  .gallery__panorama {
+    margin-bottom: 50px;
+  }
+
   .gallery__wrapper {
     width: @tablet-width;
   }
 
   .gallery__headline {
-    width: 100%;
+    width: 500px;
 
     font-size: @f-size-18;
 
@@ -158,12 +185,6 @@
 
   .gallery__item {
     width: 300px;
-
-    &--panorama {
-      width: 100%;
-
-      margin-bottom: 50px;
-    }
   }
 
   .gallery__content-wrapper {
@@ -171,10 +192,8 @@
     min-height: 155px;
 
     &--panorama {
-      width: 620px;
-      min-height: auto;
-
-      position: relative;
+      // 40 - отступы для мобильного варианта. Взяты из .gallery__wrapper
+      width: @tablet-width - 40;
     }
   }
 
@@ -194,11 +213,10 @@
     justify-content: space-between;
 
     &--panorama {
-      width: auto;
       height: max-content;
+      width: max-content;
 
-      justify-content: flex-start;
-
+      position: absolute;
       top: 25px;
       right: 0;
       left: auto;
@@ -207,26 +225,20 @@
 
   .gallery__like-icon {
     position: static;
-
-    &--panorama {
-      position: static;
-    }
   }
 
   .gallery__like-count {
     line-height: 18px;
 
-    margin: 0;
-
-    &--panorama {
-      line-height: 18px;
-
-      margin: 0 10px 0 0;
-    }
+    margin: 0 10px 0 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .gallery {
+    margin-top: -470px;
+  }
+
   .gallery__wrapper {
     width: @desktop-width;
 
@@ -234,12 +246,17 @@
   }
 
   .gallery__headline {
-    width: 100%;
+    width: 780px;
 
     padding: 0 200px;
   }
 
   .gallery__content-wrapper {
     width: 100%;
+
+    &--panorama {
+      // 20 - отступы для мобильного варианта. Взяты из .gallery__wrapper
+      width: @desktop-width - 20;
+    }
   }
 }

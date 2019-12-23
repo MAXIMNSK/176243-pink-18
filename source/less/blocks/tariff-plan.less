@@ -1,0 +1,252 @@
+// подписка
+
+.tariff-plan {
+  width: 100%;
+
+  background-color: @bg-color-light;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 50px 0;
+}
+
+.tariff-plan__content-wrapper {
+  width: @mobile-width;
+
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.tariff-plan__table {
+  border-color: transparent;
+
+  margin-bottom: 50px;
+}
+
+.tariff-plan__table-headline {
+  padding: 22px 90px;
+
+  position: relative;
+
+  background-color: @dark-color-main;
+
+  overflow: hidden;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.tariff-plan__headline-content {
+  min-width: 100px;
+
+  color: @f-color-white;
+
+  font-size: @f-size-18;
+  font-weight: @f-weight-high;
+  text-transform: uppercase;
+
+  line-height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tariff-plan__headline-price {
+  font-size: 24px;
+  font-weight: @f-weight-low;
+}
+
+.tariff-plan__hit {
+  width: 74px;
+  height: 30px;
+
+  color: @f-color-white;
+  font-size: @f-size-14;
+  font-weight: @f-weight-normal;
+  text-transform: uppercase;
+
+  line-height: 30px;
+
+  background-color: @acent-color-bg;
+
+  position: absolute;
+  top: 0;
+  left: -20px;
+
+  transform: rotate(-45deg);
+}
+
+.tariff-plan__table-cell {
+  color: @f-color-main;
+
+  font-size: @f-size-14;
+  text-transform: uppercase;
+
+  padding: 22px;
+
+  background-color: @white-color-main;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.tariff-plan__table-cell-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tariff-plan__inclusive-icon {
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  &--yes {
+    width: 31px;
+    height: 21px;
+
+    background-size: 31px 21px;
+    background-image: url("../img/icon-yes.svg");
+  }
+
+  &--no {
+    width: 27px;
+    height: 26px;
+
+    background-size: 27px 26px;
+    background-image: url("../img/icon-no.svg");
+  }
+}
+
+// переключатель карусели
+.tariff-plan-slider__switcher-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+.tariff-plan-slider__switcher {
+  width: 6px;
+  height: 6px;
+
+  background-color: #b5b9be;
+
+  border-radius: 50%;
+
+  box-sizing: content-box;
+
+  &--checked {
+    border: 3px solid @dark-color-main;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+  // добавляем обводку элементу когда он в фокусе, того же цвета как и у других элементов в google chrome
+  &:focus + label {
+    outline: 1px solid #4d90fe;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .tariff-plan {
+    padding-bottom: 200px;
+
+    // смещаем следующий блок на блок tariff-plan (по макету)
+    margin-bottom: -130px;
+  }
+
+  .tariff-plan__content-wrapper {
+    width: @tablet-width;
+  }
+
+  .tariff-plan__table-headline {
+    padding: 5px 25px;
+
+    &--mobile {
+      display: table-cell;
+
+      visibility: hidden;
+    }
+  }
+
+  .tariff-plan__headline-content {
+    font-size: @f-size-16;
+    font-weight: @f-weight-high;
+  }
+
+  .tariff-plan__headline-price {
+    font-size: @f-size-18;
+    font-weight: @f-weight-low;
+  }
+
+  .tariff-plan__table-cell {
+    text-transform: none;
+
+    padding: 10px;
+
+    &--mobile {
+      display: table-cell;
+    }
+  }
+
+  .tariff-plan__table-cell-wrapper {
+    justify-content: center;
+  }
+
+  .tariff-plan__content-inclusive {
+    &--table {
+      display: none;
+    }
+  }
+
+  .tariff-plan-slider__switcher-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff-plan {
+    padding-bottom: 100px;
+
+    margin-bottom: 0;
+  }
+
+  .tariff-plan__content-wrapper {
+    width: @desktop-width;
+
+    padding: 0 10px;
+  }
+
+  .tariff-plan__table-headline {
+    padding: 15px 50px;
+  }
+
+  .tariff-plan__headline-content {
+    font-size: @f-size-18;
+  }
+
+  .tariff-plan__headline-price {
+    font-size: @f-size-24;
+  }
+
+  .tariff-plan__table-cell {
+    font-size: @f-size-18;
+
+    padding: 20px 25px;
+  }
+}

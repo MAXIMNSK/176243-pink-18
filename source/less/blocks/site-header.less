@@ -4,7 +4,16 @@
   flex-direction: row;
   justify-content: center;
 
+  margin-bottom: -70px;
+
   background-color: @f-color-main;
+
+  position: relative;
+  z-index: 1;
+
+  &--menu-closed {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 .site-header__hat {
@@ -27,20 +36,31 @@
 
 .site-header__burger {
   width: 24px;
-  height: 23px;
+  height: 24px;
 
   font-size: 0;
 
   border: none;
 
   background-color: transparent;
-  background-image: url("../img/icon-menu-cross.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 50%;
+
+  &--open-menu {
+    background-image: url("../img/icon-menu-burger.svg");
+  }
+
+  &--close-menu {
+    background-image: url("../img/icon-menu-cross.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .site-header {
+    margin-bottom: -110px;
+  }
+
   .site-header__wrapper {
     width: @tablet-width;
     min-height: 110px;
@@ -52,6 +72,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-header {
+    background-color: rgba(0, 0, 0, 0.25);
+
+    margin-bottom: -121px;
+  }
+
   .site-header__wrapper {
     width: @desktop-width;
 

@@ -12,21 +12,25 @@
   <header class="site-header">
     <div class="site-header__wrapper">
       <div class="site-header__hat">
-        <a>
+        <!-- if this page != index-page, then add attribute link to index-page -->
+        <a href="index.html">
           <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
             alt="Промо-сайт приложения PINK">
         </a>
-        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+        <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
+            <!-- if this === index-page, then del attribute href -->
             <a href="index.html" class="header-navigation__link">Главная</a>
           </li>
           <li class="header-navigation__item">
-            <a href="gallery.html" class="header-navigation__link">Фотографии</a>
+            <!-- if this === gallery-page, then del attribute href -->
+            <a class="header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === challenge-page, then del attribute href -->
             <a href="challenge.html" class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
@@ -46,36 +50,36 @@
       </div>
     </section>
     <section class="gallery">
+      <h2 class="gallery__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+        ваших?</h2>
+      <div class="gallery__panorama">
+        <a href="https://via.placeholder.com/150x150">
+          <img src="img/panorama-mobile@1x.jpg" width="320" height="137" class=""
+            alt="лучшая фото-панорама дня, выложенная пользователем">
+        </a>
+        <div class="gallery__content-wrapper gallery__content-wrapper--panorama">
+          <span class="gallery__best-photo">Панорама дня</span>
+          <p class="gallery__username-publication-time">
+            <span class="gallery__username">Анна</span>
+            <span class="gallery__publication-time">(5 минут назад)</span>
+          </p>
+          <p class="gallery__comment">
+            Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
+            свои
+            вопросы!
+          </p>
+          <div class="gallery__like gallery__like--panorama">
+            <button type="button" class="gallery__like-icon gallery__like-icon--panorama"
+              aria-label="лайк - если понравилось фото"></button>
+            <span class="gallery__like-count gallery__like-count--panorama">нравится: 215</span>
+          </div>
+        </div>
+      </div>
       <div class="gallery__wrapper">
-        <h2 class="gallery__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
-          ваших?</h2>
         <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama">
-            <span class="gallery__best-photo">Панорама дня</span>
-            <a href="https://via.placeholder.com/150x150">
-              <img src="img/panorama-mobile@1x.jpg" width="320" height="137"
-                class="gallery__photo gallery__photo--wide-format" alt="фото выложенное пользователем">
-            </a>
-            <div class="gallery__content-wrapper gallery__content-wrapper--panorama">
-              <p class="gallery__username-publication-time">
-                <span class="gallery__username">Анна</span>
-                <span class="gallery__publication-time">(5 минут назад)</span>
-              </p>
-              <p class="gallery__comment">
-                Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
-                свои
-                вопросы!
-              </p>
-              <div class="gallery__like gallery__like--panorama">
-                <button type="button" class="gallery__like-icon gallery__like-icon--panorama"
-                  aria-label="лайк - если понравилось фото"></button>
-                <span class="gallery__like-count gallery__like-count--panorama">нравится: 215</span>
-              </div>
-            </div>
-          </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -94,7 +98,7 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -113,7 +117,7 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -132,7 +136,7 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -151,7 +155,7 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -170,7 +174,7 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" class=""
                 alt="фото выложенное пользователем">
             </a>
             <div class="gallery__content-wrapper">
@@ -189,6 +193,36 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="add-photo">
+      <div class="add-hoto__wrapper">
+        <h2 class="add-photo__headline">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+      </div>
+      <div class="add-photo__photo-correction-block">
+        <img src="img/photo-road-mobile@1x.jpg" width="280" height="374" class="add-photo__photo"
+          alt="коррекция и загрузка пользовательской фотографии">
+        <div class="add-photo__correction-parameters">
+          <form>
+            <div class="add-photo__slider">
+              <input type="radio" id="change-size-photo" name="photo correction" class="visually-hidden"
+                aria-label="изменить размер фотографии">
+              <label for="change-size-photo" class="add-photo__editor-photo add-photo__editor-photo--size">изменить размер фотографии</label>
+
+              <input type="radio" id="change-color-photo" name="photo correction" class="visually-hidden"
+                aria-label="изменить насыщенность цвета фотографии">
+              <label for="change-color-photo" class="add-photo__editor-photo add-photo__editor-photo--color">изменить насыщенность цвета фотографии</label>
+
+              <input type="radio" id="change-contrast-photo" name="photo correction" class="visually-hidden"
+                aria-label="изменить контрастность фотографии">
+              <label for="change-contrast-photo" class="add-photo__editor-photo add-photo__editor-photo--contrast">изменить контрастность фотографии</label>
+            </div>
+            <div class="add-photo__slider-buttons">
+              <button class="add-photo__slider-btn add-photo__slider-btn--send">Запостить</button>
+              <button class="add-photo__slider-btn add-photo__slider-btn--cancel">Отмена</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -215,6 +249,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
