@@ -71,8 +71,8 @@
     </section>
     <section class="advantages">
       <h2 class="advantages__headline">
-        <span class="advantages__headline--first-part">Устали от серости мегаполиса?</span>
-        <span class="advantages__headline--second-part">Нам есть, что вам предложить!</span>
+        <span class="advantages__headline-part advantages__headline-part--first-part">Устали от серости мегаполиса?</span>
+        <span class="advantages__headline-part advantages__headline-part--second-part">Нам есть, что вам предложить!</span>
       </h2>
       <div class="advantages__background-wrapper">
         <div class="advantages__content-wrapper">
@@ -94,10 +94,26 @@
                 и заводите новых</p>
             </li>
           </ul>
+
+
+
+
+          <!--                    variant 1
           <div class="advantages__iphone-wrapper">
             <p class="advantages__iphone advantages__iphone--gray"></p>
             <p class="advantages__iphone advantages__iphone--pink"></p>
             <p class="advantages__iphone advantages__iphone--smile"></p>
+          </div>
+          -->
+
+
+
+
+          <!--                    variant 2                    -->
+          <div class="advantages__iphone-wrapper">
+            <img src='img/iphone-screen-mobile@1x.png' class="advantages__iphone advantages__iphone--gray">
+            <img src='img/iphone-screen-mobile@1x.png' class="advantages__iphone advantages__iphone--pink">
+            <img src='img/iphone-screen-mobile@1x.png' class="advantages__iphone advantages__iphone--smile">
           </div>
         </div>
       </div>
@@ -115,13 +131,12 @@
         </div>
       </div>
     </section>
-    <section class="feedback feedback-slider">
+    <section class="feedback feedback">
       <h2 class="feedback visually-hidden">Отзывы наших пользователей</h2>
       <div class="feedback__content-wrapper">
-        <button type="button" class="feedback__arrow feedback__arrow--left"
-          aria-label="показать предыдущий комментарий"></button>
-        <ul class="feedback__list slider__list">
-          <li class="feedback__element slider__element">
+        <button type="button" class="feedback__arrow feedback__arrow--left" aria-label="показать предыдущий комментарий"></button>
+        <ul class="feedback__list">
+          <li class="feedback__element">
             <p class="feedback__user">
               <span class="feedback__user-name">Николай Петров</span>
               <span class="feedback__user-age-profession">25 лет, водитель трамвая</span>
@@ -131,26 +146,31 @@
               познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
           </li>
         </ul>
-        <button type="button" class="feedback__arrow feedback__arrow--right"
-          aria-label="показать следующий комментарий"></button>
-        <div class="feedback-slider__switcher-wrapper">
+        <button type="button" class="feedback__arrow feedback__arrow--right" aria-label="показать следующий комментарий"></button>
+        <div class="feedback__switcher-wrapper">
           <input type="radio" id="comment-switcher-1" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать новый отзыв" checked>
-          <label for="comment-switcher-1" class="feedback-slider__switcher feedback-slider__switcher--checked"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать новый отзыв" checked>
+          <label for="comment-switcher-1" class="feedback__switcher feedback__switcher--checked"></label>
 
           <input type="radio" id="comment-switcher-2" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать последний отзыв">
-          <label for="comment-switcher-2" class="feedback-slider__switcher"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать последний отзыв">
+          <label for="comment-switcher-2" class="feedback__switcher"></label>
 
           <input type="radio" id="comment-switcher-3" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать предпоследний отзыв">
-          <label for="comment-switcher-3" class="feedback-slider__switcher"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать предпоследний отзыв">
+          <label for="comment-switcher-3" class="feedback__switcher"></label>
         </div>
       </div>
     </section>
-    <section class="tariff-plan tariff-plan-slider">
+    <section class="tariff-plan">
       <div class="tariff-plan__content-wrapper">
         <h2 class="visually-hidden">Прайс на подписку</h2>
+
+
+
+
+
+        <!--                                                            variant 1
         <table class="tariff-plan__table">
           <tr>
             <th class="tariff-plan__table-headline tariff-plan__table-headline--mobile">
@@ -245,19 +265,115 @@
             </td>
           </tr>
         </table>
-        <div class="tariff-plan-slider__switcher-wrapper">
+        -->
+
+
+
+        <!--                    variant 2                    -->
+        <table class="tariff-plan__table">
+          <tr>
+            <th class="tariff-plan__table-headline tariff-plan__table-headline--mobile">
+              <span class="tariff-plan__headline-content">
+                пусто <span class="tariff-plan__headline-price">нет цены</span>
+              </span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                База <span class="tariff-plan__headline-price">1,99 USD</span>
+              </span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                Стандарт <span class="tariff-plan__headline-price">3,99 USD</span>
+              </span>
+              <span class="tariff-plan__hit">хит</span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                Анлим <span class="tariff-plan__headline-price">9,99 USD</span>
+              </span>
+            </th>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Розовый фильтр</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый фильтр</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый фильтр</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый фильтр</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Смайлики</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Смайлики</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Смайлики</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Смайлики</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Комментарии</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Комментарии</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Комментарии</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Комментарии</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+
+
+
+
+
+        <div class="tariff-plan__switcher-wrapper">
           <input type="radio" id="tariff-plan-switcher-1" name="switcher tariff-plan slider"
-            class="tariff-plan-slider__switcher visually-hidden" aria-label="показать первый тариф">
-          <label for="tariff-plan-switcher-1" class="tariff-plan-slider__switcher"></label>
+            class="tariff-plan__switcher visually-hidden" aria-label="показать первый тариф">
+          <label for="tariff-plan-switcher-1" class="tariff-plan__switcher"></label>
 
           <input type="radio" id="tariff-plan-switcher-2" name="switcher tariff-plan slider"
-            class="tariff-plan-slider__switcher visually-hidden" aria-label="показать второй тариф" checked>
+            class="tariff-plan__switcher visually-hidden" aria-label="показать второй тариф" checked>
           <label for="tariff-plan-switcher-2"
-            class="tariff-plan-slider__switcher tariff-plan-slider__switcher--checked"></label>
+            class="tariff-plan__switcher tariff-plan__switcher--checked"></label>
 
           <input type="radio" id="tariff-plan-switcher-3" name="switcher tariff-plan slider"
-            class="tariff-plan-slider__switcher visually-hidden" aria-label="показать третий тариф">
-          <label for="tariff-plan-switcher-3" class="tariff-plan-slider__switcher"></label>
+            class="tariff-plan__switcher visually-hidden" aria-label="показать третий тариф">
+          <label for="tariff-plan-switcher-3" class="tariff-plan__switcher"></label>
         </div>
       </div>
     </section>
@@ -265,25 +381,21 @@
       <div class="support-hub__wrapper">
         <h2 class="support-hub__headline">Остались вопросы? Свяжитесь с нами!</h2>
         <p class="support-hub__call-back support-hub__content-column">
-          <!-- можно изменить на h3 нижний span, но думаю семантически это будет не красиво -->
           <span class="support-hub__small-headline">Звоните:</span>
           <a href="tel:88125556666" class="support-hub__accent-content">+7 (812) 555-66-66</a>
         </p>
         <p class="support-hub__write-back support-hub__content-column">
-          <!-- можно изменить на h3 нижний span, но думаю семантически это будет не красиво -->
           <span class="support-hub__small-headline">Пишите:</span>
           <a href="mailto:mail@htmlacademy.ru" class="support-hub__accent-content">mail@htmlacademy.ru</a>
         </p>
         <p class="support-hub__come-visit support-hub__content-column">
-          <!-- можно изменить на h3 нижний span, но думаю семантически это будет не красиво -->
           <span class="support-hub__small-headline">Приезжайте в гости:</span>
-          <!-- указать соответствующий атрибут для адреса -->
-          <a href="#" class="support-hub__accent-content">ул. Большая Конюшенная, 19/8</a>
+          <address class="support-hub__accent-content">ул. Большая Конюшенная, 19/8</address>
         </p>
       </div>
       <div class="support-hub__wrapper-map">
         <img src="img/bg-map-mobile@1x.png" width="320" height="645" class="support-hub_bg-map"
-          alt="карта с отметкой адреса О"Хулиганс Паб, Невский проспект 20">
+          alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
       </div>
     </section>
   </main>
@@ -314,3 +426,9 @@
 </body>
 
 </html>
+
+<!--
+добавить класс no-js, при котором элемент меню у нас будет в потоке
+
+при написании и использовании js - у нас будет удаляться этот класс и элемент будет абсолютно позиционироваться и прятаться по умолчанию
+-->

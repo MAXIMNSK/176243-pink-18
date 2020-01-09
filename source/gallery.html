@@ -195,35 +195,55 @@
         </ul>
       </div>
     </section>
-    <section class="add-photo">
-      <div class="add-hoto__wrapper">
-        <h2 class="add-photo__headline">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+    <section class="photo-loader">
+      <div class="photo-loader__wrapper-headline">
+        <h2 class="photo-loader__headline">
+          <span>Затмите их всех!</span>
+          <span>Выкладывайте все, что накопилось в телефоне!</span>
+        </h2>
       </div>
-      <div class="add-photo__photo-correction-block">
-        <img src="img/photo-road-mobile@1x.jpg" width="280" height="374" class="add-photo__photo"
-          alt="коррекция и загрузка пользовательской фотографии">
-        <div class="add-photo__correction-parameters">
-          <form>
-            <div class="add-photo__slider">
-              <input type="radio" id="change-size-photo" name="photo correction" class="visually-hidden"
-                aria-label="изменить размер фотографии">
-              <label for="change-size-photo" class="add-photo__editor-photo add-photo__editor-photo--size">изменить размер фотографии</label>
-
-              <input type="radio" id="change-color-photo" name="photo correction" class="visually-hidden"
-                aria-label="изменить насыщенность цвета фотографии">
-              <label for="change-color-photo" class="add-photo__editor-photo add-photo__editor-photo--color">изменить насыщенность цвета фотографии</label>
-
-              <input type="radio" id="change-contrast-photo" name="photo correction" class="visually-hidden"
-                aria-label="изменить контрастность фотографии">
-              <label for="change-contrast-photo" class="add-photo__editor-photo add-photo__editor-photo--contrast">изменить контрастность фотографии</label>
-            </div>
-            <div class="add-photo__slider-buttons">
-              <button class="add-photo__slider-btn add-photo__slider-btn--send">Запостить</button>
-              <button class="add-photo__slider-btn add-photo__slider-btn--cancel">Отмена</button>
-            </div>
-          </form>
+      <form class="photo-loader__form">
+        <div class="photo-loader__wrapper-photo">
+          <img src="img/photo-road-desktop@1x.jpg" width="300" height="400" alt="сюда можно загрузить фотографию">
         </div>
-      </div>
+        <div class="photo-loader__wrapper-editor">
+          <div class="photo-loader__editor">
+            <p class="photo-loader__editor-element">
+              <!-- если нажали на один инпут (картинку) то остальные приходят в состояние деактивации и hidden scale -->
+              <input type="radio" id="crop" name="editor crop" class="photo-loader__radio-element" checked>
+              <label for="crop" class="photo-loader__label-element photo-loader__label-element--crop">
+                <span class="photo-loader__editor-scale photo-loader__editor-scale--crop">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--crop"></span>
+                </span>
+              </label>
+            </p>
+            <p class="photo-loader__editor-element">
+              <input type="radio" id="fill" name="editor fill" class="photo-loader__radio-element" checked>
+              <label for="fill"
+                class="photo-loader__label-element photo-loader__label-element--fill photo-loader__label-element--fill-deactive">
+                <span
+                  class="photo-loader__editor-scale photo-loader__editor-scale--fill photo-loader__editor-scale--hidden">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--fill"></span>
+                </span>
+              </label>
+            </p>
+            <p class="photo-loader__editor-element">
+              <input type="radio" id="contrast" name="editor contrast" class="photo-loader__radio-element" checked>
+              <label for="contrast"
+                class="photo-loader__label-element photo-loader__label-element--contrast photo-loader__label-element--contrast-deactive">
+                <span
+                  class="photo-loader__editor-scale photo-loader__editor-scale--contrast photo-loader__editor-scale--hidden">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--contrast"></span>
+                </span>
+              </label>
+            </p>
+          </div>
+          <div class="photo-loader__wrapper-buttons">
+            <button type="submit" class="photo-loader__btn">Запостить</button>
+            <button type="submit" class="photo-loader__btn photo-loader__btn--cancel">Отмена</button>
+          </div>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="site-footer">
