@@ -1,16 +1,25 @@
-// блок тега main с сылкой на приложение в интернет-магазинах, информация о совместимости с ОС
+// блок тега main с сылкамий на приложение в интернет-магазинах + информация о совместимости с ОС
 .application {
   width: 100%;
-  min-height: 462px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 5px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// в случае если дисплей высокой плотности (а именно от 1.5dppx) и размер вьюпорта больше 320px то меняем фоновое изображение
+@media (min-width: @mobile-width) and (min-resolution: 1.5dppx) {
+  .application {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+
+    // ужимаем изображение до "нормального размера" после ретинизации оного
+    background-size: 320px 462px;
+  }
 }
 
 .application__wrapper {
@@ -25,7 +34,7 @@
 
 .application__introduction {
   width: @mobile-width;
-  min-height: 462px;
+  min-height: 466px;
 
   padding: 0 20px;
 
@@ -43,7 +52,8 @@
   line-height: 1.2;
 
   margin: 95px 0 0 0;
-  padding: 0 35px;
+
+  padding: 0;
 
   position: relative;
   z-index: 1;
@@ -51,7 +61,7 @@
 
 .application__use {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 }
 
@@ -60,7 +70,7 @@
 
   background-color: #1d2631;
 
-  padding: 28px 20px 35px 20px;
+  padding: 28px 20px 15px 20px;
 
   display: flex;
   flex-direction: column;
@@ -71,10 +81,12 @@
   color: @f-color-white;
   font-size: @f-size-18;
   font-weight: @f-weight-high;
-
   text-decoration: none;
 
-  padding: 18px 39px;
+  text-align: center;
+
+  padding: 14px 35px 16px 35px;
+
   margin: 0 0 30px 0;
 
   border: 3px solid #ffffff;
@@ -86,14 +98,15 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
+  // миксина для сброса стандартных стилей у списка ul
   .list-style-drop;
 }
 
 .application__mobile-item {
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
 }
 
 .application__mobile-os {
@@ -110,6 +123,7 @@
 
   &--apple {
     background-image: url("../img/logo-apple.svg");
+    background-position: 50% 2px;
   }
 
   &--android {
@@ -122,21 +136,20 @@
 }
 
 .application__accessibility {
-  width: 229px;
+  width: 230px;
 
   color: @f-color-white;
   font-size: @f-size-14;
-  line-height: 24px;
   font-weight: @f-weight-low;
 
+  line-height: 22px;
   text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .application {
-    min-height: 729px;
-
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 0;
   }
 
   .application__wrapper {
@@ -155,7 +168,7 @@
 
     padding: 0 40px;
 
-    margin-top: 200px;
+    margin-top: 202px;
 
     &--gallery {
       width: 100%;
@@ -165,40 +178,79 @@
       position: static;
 
       margin: 180px 0 0 0;
+
       padding: 0 50px;
     }
+  }
+
+  .application__use {
+    width: 100%;
+    height: 545px;
   }
 
   .application__content-wrapper {
     width: 300px;
 
+    padding: 28px 0 15px 0;
+
+    background-color: transparent;
+
     position: absolute;
     top: 350px;
     left: 20px;
+  }
 
-    background-color: transparent;
+  .application__download-btn {
+    width: 100%;
+
+    padding: 13px 35px 15px 35px;
+
+    margin-bottom: 41px;
+  }
+
+  .application__mobile-list {
+    margin-bottom: 9px;
+  }
+
+  .application__accessibility {
+    width: 100%;
+
+    font-size: @f-size-18;
+    line-height: 24px;
+  }
+}
+
+// в случае если дисплей высокой плотности (а именно от 1.5dppx) и размер вьюпорта больше 660px то меняем фоновое изображение
+@media (min-width: @tablet-width) and (min-resolution: @retina-dppx) {
+  .application {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+
+    // ужимаем изображение до "нормального размера" после ретинизации оного
+    background-size: 1200px 729px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .application {
-    min-height: 853px;
-
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 12px;
   }
 
   .application__introduction {
     width: @desktop-width;
-    min-height: 853px;
+    min-height: 865px;
 
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 0 10px;
   }
 
   .application__headline {
+    width: 250px;
+
     font-size: @f-size-50;
 
-    margin-top: 220px;
+    padding: 0;
+
+    margin: 230px 0 0 26px;
 
     &--gallery {
       padding: 0 200px;
@@ -206,10 +258,29 @@
   }
 
   .application__content-wrapper {
-    padding-right: 10px;
-    padding-left: 10px;
-
-    top: 400px;
+    top: 435px;
     left: 10px;
+  }
+
+  .application__download-btn {
+    font-size: @f-size-21;
+
+    padding: 11px 0 14px 0;
+
+    margin-bottom: 64px;
+  }
+
+  .application__mobile-list {
+    margin-bottom: 25px;
+  }
+}
+
+// в случае если дисплей высокой плотности (а именно от 1.5dppx) и размер вьюпорта больше 960px то меняем фоновое изображение
+@media (min-width: @desktop-width) and (min-resolution: @retina-dppx) {
+  .application {
+    background-image: url("../img/bg-back-desktop@2x.jpg");
+
+    // ужимаем изображение до "нормального размера" после ретинизации оного
+    background-size: 2560px 853px;
   }
 }

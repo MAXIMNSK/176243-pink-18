@@ -2,10 +2,14 @@
 .feedback {
   width: 100%;
 
+  padding: 30px 0;
+
+  margin-top: -43px;
+
+  background-color: @white-color-main;
+
   display: flex;
   justify-content: center;
-
-  padding: 40px 0;
 }
 
 .feedback__content-wrapper {
@@ -45,7 +49,7 @@
   font-size: @f-size-18;
   font-weight: @f-weight-high;
 
-  margin: 0 0 25px 0;
+  margin: 1px 0 2px 0;
 }
 
 .feedback__user-age-profession {
@@ -60,7 +64,8 @@
   line-height: 30px;
 
   padding: 0;
-  margin: 0 0 20px 0;
+
+  margin: 0 0 22px 0;
 }
 
 .feedback__arrow {
@@ -71,12 +76,12 @@
 .feedback__switcher-wrapper {
   width: 100%;
 
+  padding: 10px 0;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  padding: 10px 0;
 }
 
 .feedback__switcher {
@@ -90,11 +95,13 @@
   box-sizing: content-box;
 
   &--checked {
+    background-color: @white-color-main;
+
     border: 3px solid @dark-color-main;
   }
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 18px;
   }
   // добавляем обводку элементу когда он в фокусе, того же цвета как и у других элементов в google chrome
   &:focus + label {
@@ -103,6 +110,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .feedback {
+    padding-top: 29px;
+
+    margin-top: 0;
+  }
+
   .feedback__content-wrapper {
     width: @tablet-width;
   }
@@ -112,11 +125,13 @@
   }
 
   .feedback__user {
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
   }
 
   .feedback__user-name {
     font-size: @f-size-20;
+
+    margin-bottom: 14px;
   }
 
   .feedback__user-age-profession {
@@ -126,22 +141,30 @@
 
     display: block;
   }
+
+  .feedback__user-comment {
+    font-size: @f-size-18;
+
+    margin-bottom: 35px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .feedback__content-wrapper {
     width: @desktop-width;
 
-    padding: 100px 10px 0 10px;
+    padding: 156px 10px 0 10px;
+
+    background-image: url("../img/icon-quotes.svg");
+    background-size: 79px 63px;
+    background-repeat: no-repeat;
+    background-position: 50.5% 43px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    background-image: url("../img/icon-quotes.svg");
-    background-size: 79px 63px;
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
+    position: relative;
   }
 
   .feedback__list {
@@ -153,6 +176,8 @@
 
   .feedback__user-name {
     font-size: @f-size-24;
+
+    margin: 2px 0 9px 0;
   }
 
   .feedback__user-age-profession {
@@ -160,6 +185,8 @@
   }
 
   .feedback__user-comment {
+    width: 700px;
+
     font-size: @f-size-18;
   }
 
@@ -171,6 +198,9 @@
     width: 30px;
     height: 50px;
 
+    position: absolute;
+    top: 180px;
+
     display: block;
 
     border: none;
@@ -178,15 +208,16 @@
     background-size: 22px 41px;
     background-repeat: no-repeat;
     background-position: 50%;
-
     background-color: transparent;
 
     &--left {
       background-image: url("../img/icon-review-arrow-left.svg");
+      left: 7px;
     }
 
     &--right {
       background-image: url("../img/icon-review-arrow-right.svg");
+      right: 7px;
     }
   }
 }

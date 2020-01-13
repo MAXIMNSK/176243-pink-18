@@ -14,8 +14,12 @@
       <div class="site-header__hat">
         <!-- if this page != index-page, then add attribute link to index-page -->
         <a href="index.html">
-          <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
-            alt="Промо-сайт приложения PINK">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
+              alt="Промо-сайт приложения PINK">
+          </picture>
         </a>
         <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
@@ -34,7 +38,7 @@
             <a class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
-            <a href="#" class="header-navigation__link">Html Academy</a>
+            <a href="#" class="header-navigation__link">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -54,8 +58,11 @@
   <footer class="site-footer">
     <div class="site-footer__wrapper">
       <a href="index.html" class="site-footer__link-logo">
-        <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
-          alt="Промо-сайт приложения PINK">
+        <picture>
+          <source media='(min-width: 960px)' srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
+            alt="Промо-сайт приложения PINK">
+        </picture>
       </a>
       <ul class="social-list">
         <li class="social-list__item">

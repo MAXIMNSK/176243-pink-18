@@ -1,44 +1,42 @@
-// подписка
-
+// таблица тарифов подписки
 .tariff-plan {
   width: 100%;
+
+  padding: 92px 0 50px 0;
 
   background-color: @bg-color-light;
 
   display: flex;
   justify-content: center;
-
-  padding: 50px 0;
 }
 
 .tariff-plan__content-wrapper {
-  //width: @mobile-width;
-
-  //padding: 0 20px;
-
   width: 100%;
+
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow: hidden;
 }
 
 .tariff-plan__table {
-  border-color: transparent;
+  border-collapse: collapse;
+  border: 2px solid #e7e7e7;
 
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .tariff-plan__table-headline {
-  padding: 22px 90px;
+  padding: 19px 88px;
 
   position: relative;
 
   background-color: @dark-color-main;
 
   overflow: hidden;
+
+  border: 2px solid #e7e7e7;
 
   &--mobile {
     display: none;
@@ -49,7 +47,6 @@
   min-width: 100px;
 
   color: @f-color-white;
-
   font-size: @f-size-18;
   font-weight: @f-weight-high;
   text-transform: uppercase;
@@ -67,7 +64,7 @@
 }
 
 .tariff-plan__hit {
-  width: 74px;
+  width: 105px;
   height: 30px;
 
   color: @f-color-white;
@@ -80,8 +77,8 @@
   background-color: @acent-color-bg;
 
   position: absolute;
-  top: 0;
-  left: -20px;
+  top: 12px;
+  left: -30px;
 
   transform: rotate(-45deg);
 }
@@ -92,9 +89,11 @@
   font-size: @f-size-14;
   text-transform: uppercase;
 
-  padding: 22px;
+  padding: 21px;
 
   background-color: @white-color-main;
+
+  border: 2px solid #e7e7e7;
 
   &--mobile {
     display: none;
@@ -102,51 +101,28 @@
 }
 
 .tariff-plan__table-cell-wrapper {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  position: relative;
 }
-/*
-.tariff-plan__inclusive-icon {
-  background-position: 50%;
-  background-repeat: no-repeat;
 
-  &--yes {
-    width: 31px;
-    height: 21px;
-
-    background-size: 31px 21px;
-    background-image: url("../img/icon-yes.svg");
-  }
-
-  &--no {
-    width: 27px;
-    height: 26px;
-
-    background-size: 27px 26px;
-    background-image: url("../img/icon-no.svg");
-  }
-}
-*/
-
-//                                                                    variant 2
 .tariff-plan__content-inclusive {
   &--icon-yes {
     &::after {
       width: 31px;
       height: 21px;
 
-      content: '';
+      content: "";
 
       position: absolute;
-      top: -5px;
-      right: 0;
+      top: -2px;
+      right: -5px;
 
-      background-image: url('../img/icon-yes.svg');
-      background-size: 31px 21px;
+      background-image: url("../img/icon-yes.svg");
+      background-size: 34px 24px;
       background-repeat: no-repeat;
       background-position: 50%;
     }
@@ -157,13 +133,13 @@
       width: 27px;
       height: 26px;
 
-      content: '';
+      content: "";
 
       position: absolute;
-      top: -5px;
-      right: 0;
+      top: -6px;
+      right: -2px;
 
-      background-image: url('../img/icon-no.svg');
+      background-image: url("../img/icon-no.svg");
       background-size: 27px 26px;
       background-repeat: no-repeat;
       background-position: 50%;
@@ -179,26 +155,26 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  padding: 10px 0;
 }
 
 .tariff-plan__switcher {
   width: 6px;
   height: 6px;
 
-  background-color: #b5b9be;
+  box-sizing: content-box;
 
   border-radius: 50%;
 
-  box-sizing: content-box;
+  background-color: #b5b9be;
 
   &--checked {
     border: 3px solid @dark-color-main;
+
+    background-color: @bg-color-light;
   }
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 17px;
   }
   // добавляем обводку элементу когда он в фокусе, того же цвета как и у других элементов в google chrome
   &:focus + label {
@@ -208,9 +184,8 @@
 
 @media (min-width: @tablet-width) {
   .tariff-plan {
-    padding-bottom: 200px;
+    padding: 67px 0 157px 0;
 
-    // смещаем следующий блок на блок tariff-plan (по макету)
     margin-bottom: -130px;
   }
 
@@ -219,7 +194,9 @@
   }
 
   .tariff-plan__table-headline {
-    padding: 5px 25px;
+    width: 154px;
+
+    padding: 10px 0 16px 0;
 
     &--mobile {
       display: table-cell;
@@ -231,17 +208,31 @@
   .tariff-plan__headline-content {
     font-size: @f-size-16;
     font-weight: @f-weight-high;
+
+    line-height: 36px;
   }
 
   .tariff-plan__headline-price {
     font-size: @f-size-18;
     font-weight: @f-weight-low;
+
+    line-height: 18px;
+  }
+
+  .tariff-plan__hit {
+    width: 105px;
+    height: 30px;
+
+    top: 5px;
+    left: -32px;
   }
 
   .tariff-plan__table-cell {
+    width: 154px;
+
     text-transform: none;
 
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
 
     &--mobile {
       display: table-cell;
@@ -253,13 +244,6 @@
   }
 
   .tariff-plan__content-inclusive {
-    /*                                                variant 1
-    &--table {
-      display: none;
-    }
-    */
-
-    //                                                  variant 2
     &--table {
       font-size: 0;
     }
@@ -268,9 +252,9 @@
       width: 31px;
       height: 21px;
 
-      content: '';
+      content: "";
 
-      background-image: url('../img/icon-yes.svg');
+      background-image: url("../img/icon-yes.svg");
       background-size: 31px 21px;
       background-repeat: no-repeat;
       background-position: 50%;
@@ -286,9 +270,9 @@
       width: 27px;
       height: 26px;
 
-      content: '';
+      content: "";
 
-      background-image: url('../img/icon-no.svg');
+      background-image: url("../img/icon-no.svg");
       background-size: 27px 26px;
       background-repeat: no-repeat;
       background-position: 50%;
@@ -308,7 +292,7 @@
 
 @media (min-width: @desktop-width) {
   .tariff-plan {
-    padding-bottom: 100px;
+    padding: 132px 0;
 
     margin-bottom: 0;
   }
@@ -320,20 +304,45 @@
   }
 
   .tariff-plan__table-headline {
-    padding: 15px 50px;
+    padding: 4px 67px 18px 67px;
   }
 
   .tariff-plan__headline-content {
     font-size: @f-size-18;
+
+    line-height: 40px;
   }
 
   .tariff-plan__headline-price {
     font-size: @f-size-24;
   }
 
+  .tariff-plan__hit {
+    width: 105px;
+    height: 28px;
+
+    top: 12px;
+    left: -26px;
+  }
+
   .tariff-plan__table-cell {
     font-size: @f-size-18;
 
-    padding: 20px 25px;
+    padding: 11px 24px 12px 24px;
+  }
+
+  .tariff-plan__content-inclusive {
+    width: 35px;
+    height: 35px;
+
+    &--icon-yes {
+      background-size: 33px 23px;
+      background-position: 3px 6px;
+    }
+
+    &--icon-no {
+      background-size: 27px 26px;
+      background-position: 5px 4px;
+    }
   }
 }
