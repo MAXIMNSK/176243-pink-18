@@ -1,6 +1,6 @@
 // блок с информацией о фирме написавшей сайт
 .created-by {
-  width: min-content;
+  width: 130px;
 
   display: flex;
   flex-direction: row;
@@ -11,42 +11,85 @@
   color: @f-color-main;
   font-size: @f-size-14;
   font-weight: @f-weight-normal;
+
+  margin-right: 12px;
 }
 
 .created-by__link {
-  width: 27px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
 
   font-size: 0;
 
   display: block;
 
   background-image: url("../img/htmlacademy.svg");
-  background-size: auto;
+  background-size: 40px auto;
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
 @media (min-width: @tablet-width) {
   .created-by {
+    width: min-content;
+
     padding-left: 12px;
 
-    margin-top: 12px;
+    margin-top: 13px;
+
+    padding: 0;
+
+    &--gallery {
+      padding-left: 1px;
+    }
   }
 
   .created-by__text {
-    margin-right: 15px;
+    margin-top: 1px;
+    margin-right: 6px;
+
+    &--gallery {
+      margin-right: 2px;
+    }
   }
 
   .created-by__link {
     background-size: 40px auto;
+    background-position: 3px -2px;
 
     margin-top: 4px;
+
+    &--index {
+      background-position: 2px -2px;
+    }
+
+    &--gallery {
+      min-width: 40px;
+      min-height: 40px;
+
+      background-position: 7px 0;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .created-by {
+    width: max-content;
+
+    padding: 2px 0 0 0;
+  }
+
   .created-by__text {
     font-size: @f-size-18;
+
+    margin-top: -2px;
+  }
+
+  .created-by__link {
+    background-position: 1px -2px;
+
+    &--gallery {
+      background-position: 6px 1px;
+    }
   }
 }

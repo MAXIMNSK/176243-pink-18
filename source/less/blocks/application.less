@@ -57,12 +57,24 @@
 
   position: relative;
   z-index: 1;
+
+  &--gallery {
+    margin: 104px 0 0 0;
+  }
 }
 
-.application__use {
+.application__content-picture-wrapper {
+  width: 258px;
+  height: 286px;
+
   position: absolute;
   bottom: -1px;
   left: 0;
+}
+
+.application__use {
+  width: 100%;
+  height: auto;
 }
 
 .application__content-wrapper {
@@ -70,7 +82,7 @@
 
   background-color: #1d2631;
 
-  padding: 28px 20px 15px 20px;
+  padding: 28px 20px 16px 20px;
 
   display: flex;
   flex-direction: column;
@@ -85,7 +97,7 @@
 
   text-align: center;
 
-  padding: 14px 35px 16px 35px;
+  padding: 14px 36px 16px 36px;
 
   margin: 0 0 30px 0;
 
@@ -149,7 +161,7 @@
 @media (min-width: @tablet-width) {
   .application {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 50% 0;
+    background-position: 50% 0px;
   }
 
   .application__wrapper {
@@ -158,7 +170,7 @@
 
   .application__introduction {
     width: @tablet-width;
-    min-height: 729px;
+    min-height: 730px;
   }
 
   .application__headline {
@@ -168,7 +180,7 @@
 
     padding: 0 40px;
 
-    margin-top: 202px;
+    margin-top: 203px;
 
     &--gallery {
       width: 100%;
@@ -183,9 +195,12 @@
     }
   }
 
-  .application__use {
-    width: 100%;
+  .application__content-picture-wrapper {
+    width: 700px;
     height: 545px;
+
+    bottom: 1px;
+    left: -20px;
   }
 
   .application__content-wrapper {
@@ -196,7 +211,7 @@
     background-color: transparent;
 
     position: absolute;
-    top: 350px;
+    top: 351px;
     left: 20px;
   }
 
@@ -210,6 +225,16 @@
 
   .application__mobile-list {
     margin-bottom: 9px;
+  }
+
+  .application__mobile-os {
+    &--apple {
+      background-position: 50% 5px;
+    }
+
+    &--windows {
+      background-position: 14px 17px;
+    }
   }
 
   .application__accessibility {
@@ -238,7 +263,7 @@
 
   .application__introduction {
     width: @desktop-width;
-    min-height: 865px;
+    min-height: 876px;
 
     padding: 0 10px;
   }
@@ -250,11 +275,23 @@
 
     padding: 0;
 
-    margin: 230px 0 0 26px;
+    margin: 230px 0 0 25px;
 
     &--gallery {
+      width: 100%;
+
       padding: 0 200px;
+
+      margin: 185px 0 0 0;
     }
+  }
+
+  .application__content-picture-wrapper {
+    width: 1050px;
+    height: 645px;
+
+    bottom: 11px;
+    left: 26px;
   }
 
   .application__content-wrapper {
@@ -272,6 +309,20 @@
 
   .application__mobile-list {
     margin-bottom: 25px;
+  }
+
+  .application__mobile-os {
+    &--apple {
+      background-position: 11px 2px;
+    }
+
+    &--windows {
+      background-position: 13px 14px;
+    }
+
+    &--android {
+      background-position: 13px 10px;
+    }
   }
 }
 

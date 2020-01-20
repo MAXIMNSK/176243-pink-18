@@ -2,26 +2,28 @@
 .gallery {
   width: 100%;
 
-  position: relative;
-  z-index: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-color: #ffffff;
+  padding-top: 32px;
 
-  margin-top: -220px;
+  margin-top: -222px;
+
+  position: relative;
+  z-index: 0;
+
+  background-color: #ffffff;
 }
 
 .gallery__panorama {
   width: 100%;
 
+  margin-bottom: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-bottom: 20px;
 }
 
 .gallery__best-photo {
@@ -30,9 +32,9 @@
   font-weight: @f-weight-high;
   text-transform: uppercase;
 
-  background-color: #d22856;
-
   padding: 12px 20px;
+
+  background-color: #d22856;
 
   position: absolute;
   top: -137px;
@@ -42,22 +44,23 @@
 .gallery__wrapper {
   width: @mobile-width;
 
-  background-color: #ffffff;
-
   padding: 0 20px;
+
+  background-color: #ffffff;
 }
 
 .gallery__headline {
-  width: 241px;
+  width: 245px;
 
   font-size: @f-size-14;
   font-weight: @f-weight-normal;
   color: @f-color-main;
+
   text-align: center;
 
   line-height: 30px;
 
-  margin: 55px auto;
+  margin-bottom: 49px;
 }
 
 .gallery__list {
@@ -71,24 +74,25 @@
 }
 
 .gallery__item {
+  margin-bottom: 20px;
+
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-bottom: 20px;
 }
 
 .gallery__content-wrapper {
   width: 100%;
 
-  position: relative;
+  padding: 22px 18px 36px 18px;
 
-  padding: 25px 18px 25px 18px;
-  margin-top: -4px;
+  margin-top: -3px;
 
   background-color: @bg-color-light;
+
+  position: relative;
 
   &--panorama {
     // 40 - отступы для мобильного варианта. Взяты из .gallery__wrapper
@@ -100,7 +104,7 @@
   color: @f-color-main;
   font-size: @f-size-14;
 
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .gallery__username {
@@ -108,6 +112,7 @@
 }
 
 .gallery__publication-time {
+  font-size: @f-size-12;
   font-weight: @f-weight-low;
   text-transform: uppercase;
 }
@@ -116,7 +121,7 @@
   width: 100%;
 
   color: @f-color-main;
-  font-size: @f-size-12;
+  font-size: @f-size-14;
   font-weight: @f-weight-normal;
 
   line-height: 24px;
@@ -126,8 +131,7 @@
 
 .gallery__like {
   position: relative;
-
-  margin-top: 10px;
+  top: 11px;
 }
 
 .gallery__like-icon {
@@ -142,8 +146,8 @@
   border: none;
 
   position: absolute;
-  top: 2px;
-  left: 0;
+  top: 3px;
+  left: -1px;
 }
 
 .gallery__like-count {
@@ -152,19 +156,19 @@
   font-weight: @f-weight-normal;
   text-transform: uppercase;
 
-  margin-left: 30px;
+  margin-left: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .gallery {
-    margin-top: -285px;
+    margin-top: -290px;
   }
 
   .gallery__panorama {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
-  .gallery__photo {                                     // добавл для теста
+  .gallery__photo {
     width: 100%;
     height: auto;
   }
@@ -174,11 +178,11 @@
   }
 
   .gallery__headline {
-    width: 500px;
+    width: 700px;
 
     font-size: @f-size-18;
 
-    padding: 0 100px;
+    padding: 45px 100px 27px 100px;
   }
 
   .gallery__list {
@@ -195,21 +199,32 @@
     width: 100%;
     min-height: 155px;
 
+    padding: 28px 28px 25px 28px;
+
     &--panorama {
       // 40 - отступы для мобильного варианта. Взяты из .gallery__wrapper
       width: @tablet-width - 40;
+      min-height: 110px;
+
+      padding: 28px 28px 25px 28px;
     }
+  }
+
+  .gallery__best-photo {
+    top: -453px;
+    right: -1px;
   }
 
   .gallery__like {
     width: 100%;
 
-    padding: 0 20px;
+    padding: 0 31px 0 28px;
 
     margin: 0;
 
     position: absolute;
-    bottom: 30px;
+    top: auto;
+    bottom: 25px;
     left: 0;
 
     display: flex;
@@ -221,8 +236,8 @@
       width: max-content;
 
       position: absolute;
-      top: 25px;
-      right: 0;
+      top: 28px;
+      right: -2px;
       left: auto;
     }
   }
@@ -234,7 +249,7 @@
   .gallery__like-count {
     line-height: 18px;
 
-    margin: 0 10px 0 0;
+    margin: 0 16px 0 0;
   }
 }
 
@@ -243,24 +258,55 @@
     margin-top: -470px;
   }
 
+  .gallery__headline {
+    width: @desktop-width;
+
+    padding: 0 160px;
+
+    margin: 60px 0 88px 0;
+  }
+
   .gallery__wrapper {
     width: @desktop-width;
 
     padding: 0 10px;
   }
 
-  .gallery__headline {
-    width: 780px;
-
-    padding: 0 200px;
+  .gallery__item {
+    margin-bottom: 54px;
   }
 
   .gallery__content-wrapper {
-    width: 100%;
+    min-height: 155px;
+
+    padding: 28px 28px 24px 27px;
 
     &--panorama {
       // 20 - отступы для мобильного варианта. Взяты из .gallery__wrapper
       width: @desktop-width - 20;
+
+      min-height: 50px;
+    }
+  }
+
+  .gallery__best-photo {
+    padding: 11px 20px 12px 19px;
+
+    top: -452px;
+    right: 0px;
+  }
+
+  .gallery__like {
+    padding-right: 29px;
+
+    bottom: 25px;
+    left: -1px;
+
+    &--panorama {
+      padding: 0 30px;
+
+      right: 2px;
+      left: auto;
     }
   }
 }

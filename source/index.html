@@ -13,11 +13,11 @@
     <div class="site-header__wrapper">
       <div class="site-header__hat">
         <!-- if this page != index-page, then add attribute link to index-page -->
-        <a>
+        <a class='site-header__content-picture-wrapper'>
           <picture>
             <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
             <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
+            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="76" height="24"
               alt="Промо-сайт приложения PINK">
           </picture>
         </a>
@@ -50,11 +50,13 @@
       <div class="application__wrapper">
         <div class="application__introduction">
           <h2 class="application__headline">Взгляните на жизнь иначе!</h2>
-          <picture>
-            <source sizes="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-            <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-            <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
-          </picture>
+          <div class='application__content-picture-wrapper'>
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+              <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
+            </picture>
+          </div>
         </div>
         <div class="application__content-wrapper">
           <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
@@ -309,16 +311,16 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="site-footer__wrapper site-footer__wrapper--index">
-      <a href="index.html" class="site-footer__link-logo">
+  <footer class="site-footer site-footer--index">
+    <div class="site-footer__wrapper">
+      <a class="site-footer__link-logo">
         <picture>
           <source media='(min-width: 960px)' srcset="img/logo-pink-blue-desktop.svg">
           <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
             alt="Промо-сайт приложения PINK">
         </picture>
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--index">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--twitter">ссылка на twitter</a>
         </li>
@@ -331,7 +333,7 @@
       </ul>
       <div class="created-by">
         <span class="created-by__text">Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link">HTML Academy logo</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link created-by__link--index">HTML Academy logo</a>
       </div>
     </div>
   </footer>

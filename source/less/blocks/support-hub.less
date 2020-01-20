@@ -1,5 +1,6 @@
 .support-hub {
   width: 100%;
+  min-height: 645px; // приравниваем высоту саппорт-хаба к высоте карты для мобильных
 
   position: relative;
 
@@ -33,6 +34,8 @@
 
   line-height: 30px;
   text-align: center;
+
+  margin-bottom: 18px;
 }
 
 .support-hub__content-column {
@@ -47,16 +50,24 @@
   align-items: center;
 }
 
+.support-hub__call-back {
+  margin-bottom: 8px;
+}
+
+.support-hub__call-back .support-hub__small-headline {
+  margin-bottom: 4px;
+}
+
 .support-hub__write-back {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
 .support-hub__write-back .support-hub__small-headline {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .support-hub__come-visit .support-hub__small-headline {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .support-hub__small-headline {
@@ -77,9 +88,13 @@
 }
 
 .support-hub__wrapper-map {
-  width: @mobile-width;
+  width: 320px;
+  height: 645px;
 
   margin-top: -35px;
+
+  position: absolute;
+  top: 0;
 
   &::after {
     width: 36px;
@@ -93,16 +108,21 @@
     background-repeat: no-repeat;
 
     position: absolute;
-    bottom: 72px;
+    bottom: 70px;
     right: 142px;
   }
 }
 
+.support-hub_bg-map {
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: @tablet-width) {
   .support-hub {
-    height: 780px;
+    min-height: 848px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
 
-    overflow: hidden;
+    z-index: -1;
   }
 
   .support-hub__wrapper {
@@ -135,40 +155,44 @@
     margin-right: 20px;
   }
 
-  .support-hub__small-headline {
-    margin-bottom: 8px;
+  .support-hub__content-column .support-hub__small-headline {
+    margin-bottom: 5px;
+  }
+
+  .support-hub__write-back .support-hub__small-headline {
+    margin-bottom: 9px;
   }
 
   .support-hub__come-visit .support-hub__small-headline {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .support-hub__wrapper-map {
-    width: 100%;
+    width: 700px;
+    height: 848px;
 
-    margin-top: 90px;
+    margin-top: 59px;
 
     &::after {
-      bottom: 144px;
-      right: 312px;
+      bottom: 272px;
+      right: 332px;
     }
-  }
-
-  .support-hub_bg-map {
-    width: 100%;
-    height: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .support-hub {
-    overflow: hidden;
+    min-height: 789px; // приравниваем высоту саппорт-хаба к высоте карты для десктопа
+
+    overflow: visible;
+
+    z-index: 1;
   }
 
   .support-hub__wrapper {
     width: 1200px;
 
-    padding: 65px 10px;
+    padding: 64px 10px;
 
     top: -77px;
 
@@ -195,10 +219,20 @@
     margin: 0 69px;
   }
 
-  .support-hub__small-headline,
-  .support-hub__come-visit .support-hub__small-headline,
+  .support-hub__call-back .support-hub__small-headline {
+    margin-bottom: 26px;
+  }
+
   .support-hub__write-back .support-hub__small-headline {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
+  }
+
+  .support-hub__come-visit .support-hub__small-headline {
+    margin-bottom: 26px;
+  }
+
+  .support-hub__come-visit .support-hub__accent-content {
+    line-height: 29px;
   }
 
   .support-hub__write-back {
@@ -206,9 +240,16 @@
   }
 
   .support-hub__wrapper-map {
+    width: 1200px;
+    max-height: 779px;
+
+    overflow: hidden;
+
+    margin-top: 11px;
+
     &::after {
-      bottom: 244px;
-      right: 412px;
+      bottom: 203px;
+      right: 582px;
     }
   }
 }

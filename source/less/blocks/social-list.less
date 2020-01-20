@@ -6,7 +6,7 @@
 
   .list-style-drop;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   display: flex;
   flex-direction: row;
@@ -14,13 +14,13 @@
 
 .social-list__item {
   &:nth-child(2n) {
-    margin: 0 15px;
+    margin: 0 14px;
   }
 }
 
 .social-list__link {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
 
   background-color: #fefefe;
 
@@ -39,30 +39,56 @@
 
   &--facebook {
     background-image: url("../img/icon-facebook.svg");
+    background-position: 12px 11px;
   }
 
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
+    background-size: 16px 14px;
+    background-position: 13px 14px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .social-list {
-    margin: 9px 0 0 -2px;
+    margin: 11px 17px 0 0;
+
+    &--index {
+      margin-right: 18px;
+    }
+
+    &--gallery {
+      margin: 11px 15px 0 0;
+    }
   }
 
   .social-list__link {
-    width: 49px;
-    height: 49px;
+    width: 50px;
+    height: 50px;
+
+    &--twitter {
+      background-position: 14px 14px;
+    }
 
     &--facebook {
       background-size: 9px;
-      background-position: 16px 11px;
+      background-position: 17px 12px;
     }
 
     &--youtube {
       background-size: 16px;
-      background-position: 14px 13px;
+      background-position: 15px 14px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social-list {
+    margin: 12px 0 0 5px;
+
+    &--gallery {
+      margin-top: 13px;
+      margin-left: 14px;
     }
   }
 }
