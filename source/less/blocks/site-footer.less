@@ -7,6 +7,10 @@
   &--index {
     display: none;
   }
+
+  &--challenge {
+    padding-top: 15px;
+  }
 }
 
 .site-footer__wrapper {
@@ -27,6 +31,13 @@
   &--gallery {
     margin-bottom: 37px;
   }
+
+  &--challenge {
+    width: 147px;
+    height: auto;
+
+    margin-bottom: 37px;
+  }
 }
 
 .site-footer__logo {
@@ -37,9 +48,9 @@
 @media (min-width: @tablet-width) {
   .site-footer {
     &--index {
-      display: flex;
-
       margin-top: -68px;
+
+      display: flex;
     }
 
     &--gallery {
@@ -79,6 +90,12 @@
     &--gallery {
       padding-top: 37px;
     }
+
+    &--challenge {
+      padding-top: 0;
+
+      margin-top: -24px;
+    }
   }
 
   .site-footer__wrapper {
@@ -86,5 +103,19 @@
 
     padding-right: 10px;
     padding-left: 10px;
+
+    &--challenge {
+      padding-left: 9px;
+    }
+  }
+
+  .site-footer__link-logo {
+    width: 149px;
+    height: auto;
+  }
+
+  .site-footer__logo {
+    width: 100%;
+    height: auto;
   }
 }
