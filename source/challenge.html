@@ -60,7 +60,7 @@
         <span class="challenge__headline challenge__headline--mobile challenge__headline--desktop">Пожалуйста, заполните
           форму ниже:</span>
       </h3>
-      <form method="" action="" class="challenge__form">
+      <form method="POST" action="https://echo.htmlacademy.ru" class="challenge__form">
         <div class="challenge__block challenge__personal-data challenge__personal-data--positioning">
           <fieldset
             class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__personal-data-fieldset">
@@ -141,13 +141,17 @@
               Контактная информация</legend>
             <ul class="challenge__list challenge__contact-list">
               <li class="challenge__list-item challenge__contact-item">
-                <label for="telephone" class="challenge__accent challenge__contact-item-headline">Номер телефона</label>
+                <label for="telephone"
+                  class="challenge__accent challenge__contact-item-headline challenge__contact-item-headline--tel">Номер
+                  телефона</label>
                 <input type="tel" id="telephone" name="telephone number area"
                   class="challenge__contact-info-input challenge__contact-info-input--tel"
                   placeholder="Номер, пожалуйста">
               </li>
               <li class="challenge__list-item challenge__contact-item">
-                <label for="email" class="challenge__accent challenge__contact-item-headline">Адрес почты</label>
+                <label for="email"
+                  class="challenge__accent challenge__contact-item-headline challenge__contact-item-headline--mail">Адрес
+                  почты</label>
                 <input type="email" id="email" name="email enter area"
                   class="challenge__contact-info-input challenge__contact-info-input--mail"
                   placeholder="Введите почту *">
@@ -165,18 +169,21 @@
             <ul class="challenge__list challenge__application-list">
               <li class="challenge__list-item challenge__application-item">
                 <input type="radio" id="ios" name="selection mobile os" class="visually-hidden" checked>
-                <span class="challenge__application-radio challenge__application-radio--checked"></span>
-                <label for="ios">Pink для iOS</label>
+                <label for="ios" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio challenge__application-radio--checked"></span>Pink для iOS
+                </label>
               </li>
               <li class="challenge__list-item challenge__application-item">
                 <input type="radio" id="android" name="selection mobile os" class="visually-hidden">
-                <span class="challenge__application-radio"></span>
-                <label for="android">Pink на Android</label>
+                <label for="android" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio"></span>Pink на Android
+                </label>
               </li>
               <li class="challenge__list-item challenge__application-item">
                 <input type="radio" id="windows-mobile" name="selection mobile os" class="visually-hidden">
-                <span class="challenge__application-radio"></span>
-                <label for="windows-mobile">Windows Phone</label>
+                <label for="windows-mobile" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio"></span>Windows Phone
+                </label>
               </li>
             </ul>
           </fieldset>

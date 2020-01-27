@@ -5,7 +5,9 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: 50% 5px;
+  background-position: 50% 11px;
+
+  z-index: -1;
 
   display: flex;
   flex-direction: column;
@@ -34,11 +36,25 @@
 
 .application__introduction {
   width: @mobile-width;
-  min-height: 466px;
+  min-height: 473px;
 
   padding: 0 20px;
 
   position: relative;
+
+  // распорка. без распорки не получается соответствовать макету
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 5px;
+
+    background-color: #2a3747;
+
+    position: absolute;
+    top: 7px;
+    left: 0;
+  }
 }
 
 .application__headline {
@@ -51,7 +67,7 @@
   text-align: center;
   line-height: 1.2;
 
-  margin: 95px 0 0 0;
+  margin: 101px 0 0 0;
 
   padding: 0;
 
@@ -59,13 +75,13 @@
   z-index: 1;
 
   &--gallery {
-    margin: 104px 0 0 0;
+    margin: 108px 0 0 0;
   }
 
   &--challenge {
     line-height: 29px;
 
-    margin-top: 101px;
+    margin-top: 107px;
   }
 }
 
@@ -74,7 +90,7 @@
   height: 286px;
 
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
 }
 
@@ -103,7 +119,7 @@
 
   text-align: center;
 
-  padding: 14px 36px 16px 36px;
+  padding: 13px 36px 16px 37px;
 
   margin: 0 0 30px 0;
 
@@ -146,6 +162,7 @@
 
   &--android {
     background-image: url("../img/logo-android.svg");
+    background-position: 13px 10px;
   }
 
   &--windows {
@@ -160,8 +177,12 @@
   font-size: @f-size-14;
   font-weight: @f-weight-low;
 
-  line-height: 22px;
+  line-height: 23px;
   text-align: center;
+
+  padding-bottom: 1px;
+
+  margin-top: 11px;
 }
 
 @media (min-width: @tablet-width) {
@@ -177,6 +198,10 @@
   .application__introduction {
     width: @tablet-width;
     min-height: 730px;
+
+    &::before {
+      content: none;
+    }
   }
 
   .application__headline {
@@ -195,7 +220,7 @@
 
       position: static;
 
-      margin: 180px 0 0 0;
+      margin: 178px 0 0 0;
 
       padding: 0 50px;
     }
@@ -240,16 +265,20 @@
   }
 
   .application__mobile-list {
-    margin-bottom: 9px;
+    margin-bottom: 16px;
   }
 
   .application__mobile-os {
     &--apple {
-      background-position: 50% 5px;
+      background-position: 10px 5px;
+    }
+
+    &--android {
+      background-position: 14px 11px;
     }
 
     &--windows {
-      background-position: 14px 17px;
+      background-position: 12px 16px;
     }
   }
 
@@ -274,12 +303,12 @@
 @media (min-width: @desktop-width) {
   .application {
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: 50% 12px;
+    background-position: 50% 21px;
   }
 
   .application__introduction {
     width: @desktop-width;
-    min-height: 876px;
+    min-height: 886px;
 
     padding: 0 10px;
   }
@@ -291,14 +320,14 @@
 
     padding: 0;
 
-    margin: 230px 0 0 25px;
+    margin: 239px 0 0 25px;
 
     &--gallery {
       width: 100%;
 
       padding: 0 200px;
 
-      margin: 185px 0 0 0;
+      margin: 195px 0 0 0;
     }
 
     &--challenge {
@@ -306,7 +335,7 @@
 
       padding: 0 50px 0 0;
 
-      margin-top: 185px;
+      margin-top: 194px;
     }
   }
 
@@ -319,7 +348,7 @@
   }
 
   .application__content-wrapper {
-    top: 435px;
+    top: 443px;
     left: 10px;
   }
 
@@ -332,7 +361,7 @@
   }
 
   .application__mobile-list {
-    margin-bottom: 25px;
+    margin-bottom: 33px;
   }
 
   .application__mobile-os {

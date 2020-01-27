@@ -14,7 +14,7 @@
 .support-hub__wrapper {
   width: @mobile-width;
 
-  padding: 20px 20px;
+  padding: 22px 20px;
 
   position: absolute;
   top: 0;
@@ -25,6 +25,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 100%;
+    height: 61px;
+
+    position: absolute;
+    bottom: -50px;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 0;
+  }
 }
 
 .support-hub__headline {
@@ -38,12 +53,14 @@
   margin-bottom: 18px;
 }
 
+.support-hub__wrapper-content {
+  padding-left: 1px;
+}
+
 .support-hub__content-column {
   width: 250px;
 
   text-align: center;
-
-  margin-bottom: 10px;
 
   display: flex;
   flex-direction: column;
@@ -51,7 +68,7 @@
 }
 
 .support-hub__call-back {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .support-hub__call-back .support-hub__small-headline {
@@ -60,6 +77,7 @@
 
 .support-hub__write-back {
   margin-bottom: 27px;
+  margin-left: 2px;
 }
 
 .support-hub__write-back .support-hub__small-headline {
@@ -91,7 +109,7 @@
   width: 320px;
   height: 645px;
 
-  margin-top: -35px;
+  margin-top: -33px;
 
   position: absolute;
   top: 0;
@@ -120,19 +138,37 @@
 
 @media (min-width: @tablet-width) {
   .support-hub {
-    min-height: 848px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
+    min-height: 780px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
 
-    z-index: -1;
+    z-index: 1;
   }
 
   .support-hub__wrapper {
-    width: @tablet-width;
+    width: 100%;
 
-    padding-top: 47px;
+    padding: 47px 0 27px 0;
 
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    top: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      height: 75px;
+
+      bottom: -73px;
+
+      background-size: auto 72px;
+    }
+  }
+
+  .support-hub__wrapper-headline {
+    width: 500px;
+
+    padding: 0;
+
+    margin: 0 0 28px 0;
   }
 
   .support-hub__headline {
@@ -140,23 +176,36 @@
 
     line-height: 48px;
 
-    padding: 0 100px;
+    padding: 0;
 
-    margin: 0 0 28px 0;
+    margin: 0;
+  }
+
+  .support-hub__wrapper-content {
+    width: 625px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .support-hub__content-column {
     width: 250px;
 
-    margin-bottom: 50px;
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .support-hub__call-back {
     margin-right: 20px;
   }
 
-  .support-hub__content-column .support-hub__small-headline {
-    margin-bottom: 5px;
+  .support-hub__call-back .support-hub__small-headline {
+    margin-bottom: 7px;
   }
 
   .support-hub__write-back .support-hub__small-headline {
@@ -167,16 +216,29 @@
     margin-bottom: 8px;
   }
 
+  .support-hub__come-visit .support-hub__accent-content {
+    line-height: 29px;
+  }
+
   .support-hub__wrapper-map {
     width: 700px;
-    height: 848px;
+    height: 815px;
 
-    margin-top: 59px;
+    overflow: hidden;
 
     &::after {
-      bottom: 272px;
+      bottom: 148px;
       right: 332px;
     }
+  }
+
+  .support-hub_bg-map {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 91px;
+    left: 0;
   }
 }
 
@@ -185,28 +247,41 @@
     min-height: 789px; // приравниваем высоту саппорт-хаба к высоте карты для десктопа
 
     overflow: visible;
-
-    z-index: 1;
   }
 
   .support-hub__wrapper {
-    width: 1200px;
-
-    padding: 64px 10px;
+    padding: 65px 0 14px 0;
 
     top: -77px;
 
-    justify-content: center;
+    &::after {
+      height: 150px;
+
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-size: auto 110px;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+
+      transform: scaleX(1.22);
+
+      bottom: -143px;
+    }
+  }
+
+  .support-hub__wrapper-headline {
+    margin-bottom: 57px;
   }
 
   .support-hub__headline {
     font-size: @f-size-50;
 
     line-height: 60px;
+  }
 
-    padding: 0 300px;
+  .support-hub__wrapper-content {
+    width: 890px;
 
-    margin-bottom: 57px;
+    justify-content: space-between;
   }
 
   .support-hub__content-column {
@@ -220,15 +295,15 @@
   }
 
   .support-hub__call-back .support-hub__small-headline {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
   .support-hub__write-back .support-hub__small-headline {
-    margin-bottom: 26px;
+    margin-bottom: 27px;
   }
 
   .support-hub__come-visit .support-hub__small-headline {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
   .support-hub__come-visit .support-hub__accent-content {
@@ -241,15 +316,19 @@
 
   .support-hub__wrapper-map {
     width: 1200px;
-    max-height: 779px;
+    height: 875px;
 
-    overflow: hidden;
-
-    margin-top: 11px;
+    top: -50px;
 
     &::after {
-      bottom: 203px;
-      right: 582px;
+      bottom: 204px;
+      right: 583px;
     }
+  }
+
+  .support-hub_bg-map {
+    position: absolute;
+    top: 95px;
+    left: -1px;
   }
 }

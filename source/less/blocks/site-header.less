@@ -4,12 +4,14 @@
   flex-direction: row;
   justify-content: center;
 
-  margin-bottom: -72px;
-
-  background-color: @dark-color-main;
+  margin-bottom: -78px;
 
   position: relative;
   z-index: 1;
+
+  &--menu-open {
+    background-color: @dark-color-main;
+  }
 
   &--menu-closed {
     background-color: rgba(0, 0, 0, 0.25);
@@ -19,15 +21,25 @@
 .site-header__wrapper {
   width: @mobile-width;
 
+  padding: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--menu-open {
+    background-color: @dark-color-main;
+  }
+
+  &--menu-closed {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 .site-header__hat {
   width: 100%;
 
-  padding: 22px 20px 27px 20px;
+  padding: 21px 20px 26px 20px;
 
   display: flex;
   flex-direction: row;
@@ -94,9 +106,9 @@
 
 @media (min-width: @desktop-width) {
   .site-header {
-    padding-top: 4px;
+    padding: 0;
 
-    margin-bottom: -121px;
+    margin-bottom: -131px;
 
     background-color: rgba(0, 0, 0, 0.25);
   }
@@ -108,9 +120,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 0 10px 0 9px;
-
-    margin: 0;
+    padding: 0 10px 2px 8px;
   }
 
   .site-header__hat {

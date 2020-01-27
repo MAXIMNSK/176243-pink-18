@@ -1,7 +1,7 @@
 .challenge {
   width: 100%;
 
-  margin-top: -224px;
+  margin-top: -225px;
 
   background-color: @white-color-main;
 
@@ -157,7 +157,7 @@
   display: block;
 
   &--checked {
-    background-image: url("../../img/icon-yes-checkbox.svg");
+    background-image: url("../img/icon-yes-checkbox.svg");
     background-size: 22px;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -208,6 +208,12 @@
   align-items: center;
 }
 
+.challenge__application-wrapper-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .challenge__application-radio {
   width: 36px;
   height: 36px;
@@ -216,6 +222,8 @@
 
   border: 18px solid @white-color-main;
   border-radius: 50%;
+
+  display: block;
 
   background-color: @acent-color-bg;
 
@@ -283,7 +291,9 @@
   text-transform: uppercase;
 
   &--hide {
-    visibility: hidden;
+    //visibility: hidden;
+
+    display: none;
   }
 }
 
@@ -330,7 +340,7 @@
   .challenge__legend-style {
     width: auto;
 
-    padding: 0 25px;
+    padding: 0 31px;
 
     &--tablet-show {
       display: block;
@@ -399,7 +409,7 @@
   }
 
   .challenge__contact-info-fieldset {
-    padding: 0 59px 0 58px;
+    padding: 0 58px 0 59px;
   }
 
   .challenge__contact-list {
@@ -420,10 +430,45 @@
     padding: 0 0 0 20px;
 
     margin: 10px 0 0 0;
+
+    position: relative;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+
+      content: "";
+
+      background-color: #e5e5e5;
+
+      background-position: 50%;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      top: -71px;
+    }
+
+    &--tel {
+      &::before {
+        background-image: url("../img/icon-phone.svg");
+        background-size: 20px;
+
+        right: 1px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        background-image: url("../img/icon-mail.svg");
+        background-size: 18px;
+
+        right: 1px;
+      }
+    }
   }
 
   .challenge__contact-info-input {
-    padding-left: 19px;
+    padding-left: 18px;
   }
 
   .challenge__achievement {
@@ -458,6 +503,8 @@
 
   .challenge__feedback-area {
     min-height: 193px;
+
+    padding-left: 20px;
   }
 
   .challenge__send-form {
@@ -478,20 +525,30 @@
   }
 
   .challenge__send-form-legend {
-    width: 300px;
+    min-width: max-content;
 
     padding-top: 3px;
+
+    margin-right: -2px;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  .challenge__send-form-legend .challenge__accent {
+    margin-right: 4px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .challenge {
-    margin-top: -470px;
+    margin-top: -471px;
   }
 
   .challenge__headline {
@@ -533,7 +590,7 @@
   }
 
   .challenge__registration-item-headline {
-    margin: 4px 19px 0 0;
+    margin: 4px 19px 0 1px;
   }
 
   .challenge__registration-item-input {
@@ -565,7 +622,7 @@
   }
 
   .challenge__application-item {
-    padding: 0 0 0 55px;
+    padding: 0 0 0 56px;
 
     margin: 0 0 38px 0;
 
@@ -585,7 +642,7 @@
   }
 
   .challenge__contact-list {
-    padding: 30px 0 0 0;
+    padding: 28px 0 0 0;
 
     margin: 0 0 -12px 0;
 
@@ -605,7 +662,7 @@
   }
 
   .challenge__contact-info-input {
-    padding: 18px 20px 20px 18px;
+    padding: 19px 20px 21px 18px;
 
     margin: 0;
   }
@@ -672,16 +729,16 @@
   }
 
   .challenge__send-form-legend {
-    min-width: max-content;
-
     padding: 0;
+
+    margin: 2px 0 0 0;
 
     &--show {
       width: max-content;
 
       padding: 0 5px 0 4px;
 
-      visibility: visible;
+      display: block;
     }
   }
 }
