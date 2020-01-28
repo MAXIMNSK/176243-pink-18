@@ -15,21 +15,6 @@
 
   position: relative;
   z-index: 1;
-
-  &::after {
-    content: "";
-
-    width: 100%;
-    height: 50px;
-
-    background-image: url("../img/bg-triangle-white.svg");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 50%;
-
-    position: absolute;
-    bottom: -38px;
-  }
 }
 
 .feedback__content-wrapper {
@@ -42,6 +27,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 100%;
+    height: 25px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+  }
 }
 
 .feedback__list {
@@ -53,6 +54,8 @@
 }
 
 .feedback__element {
+  width: @mobile-width;
+
   text-align: center;
 
   display: flex;
@@ -79,13 +82,15 @@
 }
 
 .feedback__user-comment {
+  width: 100%;
+
   color: @f-color-main;
   font-size: @f-size-14;
   font-weight: @f-weight-normal;
 
   line-height: 30px;
 
-  padding: 0;
+  padding: 0 19px;
 
   margin: 0 0 22px 0;
 }
@@ -96,9 +101,11 @@
 
 // переключатель карусели
 .feedback__switcher-wrapper {
-  width: 100%;
+  width: auto;
 
   padding: 10px 0;
+
+  margin-left: -3px;
 
   display: flex;
   flex-direction: row;
@@ -123,7 +130,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 18px;
+    margin-right: 17px;
   }
 
   // добавляем обводку элементу когда он в фокусе, того же цвета как и у других элементов в google chrome
@@ -138,6 +145,10 @@
     padding-bottom: 9px;
 
     margin-top: 0;
+  }
+
+  .feedback__content-wrapper {
+    width: @tablet-width;
 
     &::after {
       height: 80px;
@@ -147,15 +158,12 @@
       background-repeat: no-repeat;
       background-position: 50%;
 
-      bottom: -66px;
+      bottom: -64px;
     }
   }
 
-  .feedback__content-wrapper {
-    width: @tablet-width;
-  }
-
   .feedback__element {
+    width: @tablet-width;
     flex-direction: column-reverse;
   }
 
@@ -180,6 +188,8 @@
   .feedback__user-comment {
     font-size: @f-size-18;
 
+    padding-top: 1px;
+
     margin-bottom: 37px;
   }
 }
@@ -187,18 +197,6 @@
 @media (min-width: @desktop-width) {
   .feedback {
     padding-bottom: 13px;
-
-    &::after {
-      width: 100%;
-      height: 180px;
-
-      background-size: auto 170px;
-      background-position: 50% 0;
-
-      bottom: -136px;
-
-      transform: rotate(0.65deg);
-    }
   }
 
   .feedback__content-wrapper {
@@ -216,6 +214,25 @@
     justify-content: center;
 
     position: relative;
+
+    &::after {
+      width: 1200px;
+      height: 100px;
+
+      background-image: url("../img/bg-triangle-white.svg");
+      background-repeat: no-repeat;
+      background-size: auto 100px;
+      background-position: 50% 0;
+
+      bottom: -107px;
+      left: -120px;
+
+      transform: rotate(0.5deg);
+    }
+  }
+
+  .feedback__element {
+    width: @desktop-width;
   }
 
   .feedback__list {
@@ -236,7 +253,7 @@
   }
 
   .feedback__user-comment {
-    width: 700px;
+    width: 750px;
 
     font-size: @f-size-18;
   }

@@ -453,6 +453,7 @@
         background-image: url("../img/icon-phone.svg");
         background-size: 20px;
 
+        top: -72px;
         right: 1px;
       }
     }
@@ -462,6 +463,7 @@
         background-image: url("../img/icon-mail.svg");
         background-size: 18px;
 
+        top: -72px;
         right: 1px;
       }
     }
@@ -671,6 +673,11 @@
     padding-left: 19px;
 
     margin: 9px 0 0 0;
+
+    &::before {
+      width: 62px;
+      height: 62px;
+    }
   }
 
   .challenge__achievement {
@@ -695,7 +702,15 @@
   }
 
   .challenge__achievement-item {
-    width: max-content;
+    max-width: 265px;
+    min-width: 200px;
+
+    margin-right: 50px;
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-left: -20px;
+    }
   }
 
   .challenge__feedback {
