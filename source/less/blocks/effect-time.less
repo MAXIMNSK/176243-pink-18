@@ -1,3 +1,4 @@
+// блок с описанием эффекта от использования приложения
 .effect-time {
   display: none;
 }
@@ -5,6 +6,8 @@
 @media (min-width: @tablet-width) {
   .effect-time {
     width: 100%;
+
+    padding: 60px 0;
 
     display: flex;
     flex-direction: row;
@@ -33,24 +36,34 @@
   }
 
   .effect-time__content-wrapper {
-    width: 320px;
+    width: 312px;
+
+    padding: 35px 5px 35px 1px;
+
+    margin: 0;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    margin: 0;
-    padding: 35px 0 35px 0;
   }
 
   .effect-time__headline {
-    width: 180px;
+    width: 200px;
 
     color: @f-color-black;
     font-size: @f-size-30;
     font-weight: @f-weight-high;
 
-    margin-bottom: 20px;
+    line-height: 38px;
+
+    margin-bottom: 9px;
+  }
+
+  .effect-time__headline-part-one {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: -2px;
   }
 
   .effect-time__context,
@@ -64,24 +77,30 @@
   .effect-time__context {
     color: @f-color-main;
 
-    margin: 0;
-    margin-bottom: 20px;
     padding: 0;
+
+    margin: 0 0 11px 0;
   }
 
   .effect-time__link {
     color: @f-color-accent;
+    text-decoration: underline;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .effect-time {
+    padding: 26px 0 67px 0;
+
+    background-color: @bg-color-light;
+  }
+
   .effect-time__wrapper {
     width: @desktop-width;
 
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 0 10px;
 
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -89,18 +108,37 @@
     width: 298px;
     height: 345px;
 
-    margin-right: 70px;
+    margin-left: 1px;
   }
 
   .effect-time__content-wrapper {
-    width: 525px;
+    width: 574px;
+
+    padding: 90px 0 0 0;
+
+    align-self: stretch;
   }
 
   .effect-time__headline {
-    width: auto;
+    width: 100%;
 
     font-size: @f-size-30;
     font-weight: @f-weight-high;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .effect-time__headline-part-one {
+    margin-right: 9px;
+
+    flex-direction: row;
+  }
+
+  .effect-time__context {
+    margin-bottom: 30px;
   }
 
   .effect-time__context,

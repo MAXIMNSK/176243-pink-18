@@ -12,25 +12,33 @@
   <header class="site-header">
     <div class="site-header__wrapper">
       <div class="site-header__hat">
-        <a>
-          <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
-            alt="Промо-сайт приложения PINK">
+        <!-- if this page != index-page, then add attribute link to index-page -->
+        <a href="index.html" class="site-header__content-picture-wrapper">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo site-header__logo--challenge"
+              width="75" height="22" alt="Промо-сайт приложения PINK">
+          </picture>
         </a>
-        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+        <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
+            <!-- if this === index-page, then del attribute href -->
             <a href="index.html" class="header-navigation__link">Главная</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === gallery-page, then del attribute href -->
             <a href="gallery.html" class="header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
-            <a href="challenge.html" class="header-navigation__link">Конкурс</a>
+            <!-- if this === challenge-page, then del attribute href -->
+            <a class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
-            <a href="#" class="header-navigation__link">Html Academy</a>
+            <a href="#" class="header-navigation__link">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -41,19 +49,177 @@
     <section class="application">
       <div class="application__wrapper">
         <div class="application__introduction">
-          <h2 class="application__headline application__headline--gallery">Конкурс на самое безбашенное путешествие с
+          <h2 class="application__headline application__headline--challenge">Конкурс на самое безбашенное путешествие с
             Пинк</h2>
         </div>
       </div>
     </section>
+    <section class="challenge">
+      <h3 class="challenge__headline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+        бонусную карту!
+        <span class="challenge__headline challenge__headline--mobile challenge__headline--desktop">Пожалуйста, заполните
+          форму ниже:</span>
+      </h3>
+      <form method="POST" action="https://echo.htmlacademy.ru" class="challenge__form">
+        <div class="challenge__block challenge__personal-data challenge__personal-data--positioning">
+          <fieldset
+            class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__personal-data-fieldset">
+            <legend
+              class="challenge__legend-style challenge__legend-style--mobile-hide challenge__personal-data-headline">
+              Персональные данные
+            </legend>
+            <ul class="challenge__list challenge__registration-list">
+              <li class="challenge__list-item challenge__registration-item">
+                <label for="second-name">
+                  <span class="challenge__accent challenge__registration-item-headline">Фамилия:</span>
+                </label>
+                <input type="text" id="second-name" name="input area for second name"
+                  class="challenge__registration-item-input" placeholder="Укажите фамилию *">
+              </li>
+              <li class="challenge__list-item challenge__registration-item">
+                <label for="first-name">
+                  <span class="challenge__accent challenge__registration-item-headline">Имя:</span>
+                </label>
+                <input type="text" id="first-name" name="input area for first name"
+                  class="challenge__registration-item-input" placeholder="Введите ваше имя *">
+              </li>
+              <li class="challenge__list-item challenge__registration-item">
+                <label for="third-name">
+                  <span class="challenge__accent challenge__registration-item-headline">Отчество:</span>
+                </label>
+                <input type="text" id="third-name" name="input area for third name"
+                  class="challenge__registration-item-input" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="challenge__block challenge__block--background-light challenge__achievement">
+          <fieldset
+            class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__fieldset-style--border-show challenge__achievement-fieldset">
+            <legend class="challenge__accent challenge__legend-style challenge__achievement-headline">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <ul class="challenge__list challenge__achievement-list">
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="one" name="selfy" class="visually-hidden" checked>
+                <span class="challenge__achievement-checkbox challenge__achievement-checkbox--checked"></span>
+                <label for="one">Сделал селфи с акулой</label>
+              </li>
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="two" name="beach" class="visually-hidden" checked>
+                <span class="challenge__achievement-checkbox challenge__achievement-checkbox--checked"></span>
+                <label for="two">Обгорел на пляже</label>
+              </li>
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="three" name="Chack Norris" class="visually-hidden">
+                <span class="challenge__achievement-checkbox"></span>
+                <label for="three">Видел Чака Норриса</label>
+              </li>
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="fourth" name="souvenir" class="visually-hidden">
+                <span class="challenge__achievement-checkbox"></span>
+                <label for="fourth">Накупил сувениров</label>
+              </li>
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="fifth" name="tower" class="visually-hidden" checked>
+                <span class="challenge__achievement-checkbox challenge__achievement-checkbox--checked"></span>
+                <label for="fifth">Удержал башню</label>
+              </li>
+              <li class="challenge__list-item challenge__achievement-item">
+                <input type="checkbox" id="sixth" name="hotel" class="visually-hidden">
+                <span class="challenge__achievement-checkbox"></span>
+                <label for="sixth">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="challenge__block challenge__contact-info challenge__contact-info--positioning">
+          <fieldset
+            class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__fieldset-style--border-show challenge__contact-info-fieldset">
+            <legend
+              class="challenge__accent challenge__legend-style challenge__legend-style--mobile-hide challenge__legend-style--tablet-show">
+              Контактная информация</legend>
+            <ul class="challenge__list challenge__contact-list">
+              <li class="challenge__list-item challenge__contact-item">
+                <label for="telephone"
+                  class="challenge__accent challenge__contact-item-headline challenge__contact-item-headline--tel">Номер
+                  телефона</label>
+                <input type="tel" id="telephone" name="telephone number area"
+                  class="challenge__contact-info-input challenge__contact-info-input--tel"
+                  placeholder="Номер, пожалуйста">
+              </li>
+              <li class="challenge__list-item challenge__contact-item">
+                <label for="email"
+                  class="challenge__accent challenge__contact-item-headline challenge__contact-item-headline--mail">Адрес
+                  почты</label>
+                <input type="email" id="email" name="email enter area"
+                  class="challenge__contact-info-input challenge__contact-info-input--mail"
+                  placeholder="Введите почту *">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div
+          class="challenge__block challenge__block--background-light challenge__application challenge__application--positioning">
+          <fieldset
+            class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__fieldset-style--border-show challenge__application-fieldset">
+            <legend class="challenge__accent challenge__legend-style challenge__application-headline">С каким
+              приложением путешествовали?
+            </legend>
+            <ul class="challenge__list challenge__application-list">
+              <li class="challenge__list-item challenge__application-item">
+                <input type="radio" id="ios" name="selection mobile os" class="visually-hidden" checked>
+                <label for="ios" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio challenge__application-radio--checked"></span>Pink для iOS
+                </label>
+              </li>
+              <li class="challenge__list-item challenge__application-item">
+                <input type="radio" id="android" name="selection mobile os" class="visually-hidden">
+                <label for="android" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio"></span>Pink на Android
+                </label>
+              </li>
+              <li class="challenge__list-item challenge__application-item">
+                <input type="radio" id="windows-mobile" name="selection mobile os" class="visually-hidden">
+                <label for="windows-mobile" class="challenge__application-wrapper-radio">
+                  <span class="challenge__application-radio"></span>Windows Phone
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="challenge__block challenge__feedback">
+          <fieldset
+            class="challenge__fieldset-style challenge__fieldset-style--border-hide challenge__fieldset-style--border-show challenge__feedback-fieldset">
+            <legend class="challenge__accent challenge__legend-style challenge__feedback-headline">Опишите свои
+              эмоции</legend>
+            <textarea class="challenge__feedback-area"
+              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+        </div>
+        <div class="challenge__block challenge__send-form">
+          <div class="challenge__fieldset-style challenge__send-form-wrapper">
+            <button type="submit" class="challenge__send-form-btn">Отправить форму</button>
+            <span class="challenge__send-form-legend">
+              <span class="challenge__accent">*</span> — обязательные <span
+                class="challenge__send-form-legend challenge__send-form-legend--hide challenge__send-form-legend--show">
+                для заполнения </span> поля
+            </span>
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
-  <footer class="site-footer">
-    <div class="site-footer__wrapper">
-      <a href="index.html" class="site-footer__link-logo">
-        <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
-          alt="Промо-сайт приложения PINK">
+  <footer class="site-footer site-footer--challenge">
+    <div class="site-footer__wrapper site-footer__wrapper--challenge">
+      <a href="index.html" class="site-footer__link-logo site-footer__link-logo--challenge">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo site-footer__logo--challenge"
+            width="147" height="40" alt="Промо-сайт приложения PINK">
+        </picture>
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--challenge">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--twitter">twitter</a>
         </li>
@@ -65,11 +231,13 @@
         </li>
       </ul>
       <div class="created-by">
-        <span class="created-by__text">Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link">HTML Academy logo</a>
+        <span class="created-by__text created-by__text--challenge">Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link created-by__link--challenge">HTML
+          Academy logo</a>
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

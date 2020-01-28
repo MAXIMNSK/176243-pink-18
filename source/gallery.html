@@ -12,25 +12,33 @@
   <header class="site-header">
     <div class="site-header__wrapper">
       <div class="site-header__hat">
-        <a>
-          <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
-            alt="Промо-сайт приложения PINK">
+        <!-- if this page != index-page, then add attribute link to index-page -->
+        <a href="index.html" class="site-header__content-picture-wrapper">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
+              alt="Промо-сайт приложения PINK">
+          </picture>
         </a>
-        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+        <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
+            <!-- if this === index-page, then del attribute href -->
             <a href="index.html" class="header-navigation__link">Главная</a>
           </li>
           <li class="header-navigation__item">
-            <a href="gallery.html" class="header-navigation__link">Фотографии</a>
+            <!-- if this === gallery-page, then del attribute href -->
+            <a class="header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === challenge-page, then del attribute href -->
             <a href="challenge.html" class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
-            <a href="#" class="header-navigation__link">Html Academy</a>
+            <a href="#" class="header-navigation__link">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -46,37 +54,47 @@
       </div>
     </section>
     <section class="gallery">
+      <h2 class="gallery__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+        ваших?</h2>
+      <div class="gallery__panorama">
+        <a href="https://via.placeholder.com/150x150">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" class="gallery__photo"
+              alt="лучшая фото-панорама дня, выложенная пользователем">
+          </picture>
+        </a>
+        <div class="gallery__content-wrapper gallery__content-wrapper--panorama">
+          <span class="gallery__best-photo">Панорама дня</span>
+          <p class="gallery__username-publication-time gallery__username-publication-time--panorama">
+            <span class="gallery__username">Анна</span>
+            <span class="gallery__publication-time">(5 минут назад)</span>
+          </p>
+          <p class="gallery__comment">
+            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
+            свои
+            вопросы!
+          </p>
+          <div class="gallery__like gallery__like--panorama">
+            <button type="button" class="gallery__like-icon gallery__like-icon--panorama"
+              aria-label="лайк - если понравилось фото"></button>
+            <span class="gallery__like-count gallery__like-count--panorama">нравится: 215</span>
+          </div>
+        </div>
+      </div>
       <div class="gallery__wrapper">
-        <h2 class="gallery__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
-          ваших?</h2>
         <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama">
-            <span class="gallery__best-photo">Панорама дня</span>
-            <a href="https://via.placeholder.com/150x150">
-              <img src="img/panorama-mobile@1x.jpg" width="320" height="137"
-                class="gallery__photo gallery__photo--wide-format" alt="фото выложенное пользователем">
-            </a>
-            <div class="gallery__content-wrapper gallery__content-wrapper--panorama">
-              <p class="gallery__username-publication-time">
-                <span class="gallery__username">Анна</span>
-                <span class="gallery__publication-time">(5 минут назад)</span>
-              </p>
-              <p class="gallery__comment">
-                Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
-                свои
-                вопросы!
-              </p>
-              <div class="gallery__like gallery__like--panorama">
-                <button type="button" class="gallery__like-icon gallery__like-icon--panorama"
-                  aria-label="лайк - если понравилось фото"></button>
-                <span class="gallery__like-count gallery__like-count--panorama">нравится: 215</span>
-              </div>
-            </div>
-          </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
@@ -94,8 +112,14 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
@@ -113,8 +137,14 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
@@ -132,12 +162,18 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
-                <span class="gallery__username">Борис</span>
+                <span class="gallery__username">Сергей</span>
                 <span class="gallery__publication-time">(25 часов назад)</span>
               </p>
               <p class="gallery__comment">
@@ -151,8 +187,14 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
@@ -170,8 +212,14 @@
           </li>
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
-              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                alt="фото выложенное пользователем">
+              <picture>
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
+                  alt="фото выложенное пользователем">
+              </picture>
             </a>
             <div class="gallery__content-wrapper">
               <p class="gallery__username-publication-time">
@@ -191,14 +239,73 @@
         </ul>
       </div>
     </section>
+    <section class="photo-loader">
+      <div class="photo-loader__wrapper-headline">
+        <h2 class="photo-loader__headline">
+          <span>Затмите их всех!</span>
+          <span>Выкладывайте все, что накопилось в телефоне!</span>
+        </h2>
+      </div>
+      <form class="photo-loader__form">
+        <div class="photo-loader__wrapper-photo">
+          <picture>
+            <source media="(min-width: 960px)"
+              srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)"
+              srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img src="img/photo-road-desktop@1x.jpg" width="280" height="374" class="photo-loader__photo"
+              alt="сюда можно загрузить фотографию">
+          </picture>
+        </div>
+        <div class="photo-loader__wrapper-editor">
+          <div class="photo-loader__editor">
+            <p class="photo-loader__editor-element photo-loader__editor-element--crop">
+              <input type="radio" id="crop" name="editor crop" class="photo-loader__radio-element" checked>
+              <label for="crop" class="photo-loader__label-element photo-loader__label-element--crop">
+                <span class="photo-loader__editor-scale photo-loader__editor-scale--crop">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--crop"></span>
+                </span>
+              </label>
+            </p>
+            <p class="photo-loader__editor-element photo-loader__editor-element--fill">
+              <input type="radio" id="fill" name="editor fill" class="photo-loader__radio-element" checked>
+              <label for="fill"
+                class="photo-loader__label-element photo-loader__label-element--fill photo-loader__label-element--fill-deactive">
+                <span
+                  class="photo-loader__editor-scale photo-loader__editor-scale--fill photo-loader__editor-scale--hidden">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--fill"></span>
+                </span>
+              </label>
+            </p>
+            <p class="photo-loader__editor-element photo-loader__editor-element--contrast">
+              <input type="radio" id="contrast" name="editor contrast" class="photo-loader__radio-element" checked>
+              <label for="contrast"
+                class="photo-loader__label-element photo-loader__label-element--contrast photo-loader__label-element--contrast-deactive">
+                <span
+                  class="photo-loader__editor-scale photo-loader__editor-scale--contrast photo-loader__editor-scale--hidden">
+                  <span class="photo-loader__editor-lever photo-loader__editor-lever--contrast"></span>
+                </span>
+              </label>
+            </p>
+          </div>
+          <div class="photo-loader__wrapper-buttons">
+            <button type="submit" class="photo-loader__btn">Запостить</button>
+            <button type="submit" class="photo-loader__btn photo-loader__btn--cancel">Отмена</button>
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--gallery">
     <div class="site-footer__wrapper">
-      <a href="index.html" class="site-footer__link-logo">
-        <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
-          alt="Промо-сайт приложения PINK">
+      <a href="index.html" class="site-footer__link-logo site-footer__link-logo--gallery">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
+            alt="Промо-сайт приложения PINK">
+        </picture>
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--gallery">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--twitter">twitter</a>
         </li>
@@ -209,12 +316,14 @@
           <a href="#" class="social-list__link social-list__link--youtube">youtube</a>
         </li>
       </ul>
-      <div class="created-by">
-        <span class="created-by__text">Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link">HTML Academy logo</a>
+      <div class="created-by created-by--gallery">
+        <span class="created-by__text created-by__text--gallery">Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link created-by__link--gallery">HTML
+          Academy logo</a>
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -9,28 +9,36 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header site-header--menu-open">
     <div class="site-header__wrapper">
       <div class="site-header__hat">
-        <a>
-          <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="75" height="22"
-            alt="Промо-сайт приложения PINK">
+        <!-- if this page != index-page, then add attribute link to index-page -->
+        <a class="site-header__content-picture-wrapper">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" class="logo site-header__logo" width="76" height="24"
+              alt="Промо-сайт приложения PINK">
+          </picture>
         </a>
-        <a href="navigation.html" class="site-header__popup-initiator site-header__burger">Открыть меню навигации</a>
+        <a class="site-header__burger site-header__burger--close-menu">Открыть меню навигации</a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item">
-            <a href="index.html" class="header-navigation__link">Главная</a>
+            <!-- if this === index-page, then del attribute href -->
+            <a class="header-navigation__link">Главная</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === gallery-page, then del attribute href -->
             <a href="gallery.html" class="header-navigation__link">Фотографии</a>
           </li>
           <li class="header-navigation__item">
+            <!-- if this === challenge-page, then del attribute href -->
             <a href="challenge.html" class="header-navigation__link">Конкурс</a>
           </li>
           <li class="header-navigation__item">
-            <a href="#" class="header-navigation__link">Html Academy</a>
+            <a href="#" class="header-navigation__link">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -41,9 +49,17 @@
     <section class="application">
       <div class="application__wrapper">
         <div class="application__introduction">
-          <h2 class="application__headline">Взгляните на жизнь иначе</h2>
-          <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" class="application__use"
-            alt="пример преобразования серой жизни, в жизнь с PINK">
+          <h2 class="application__headline">Взгляните на жизнь иначе!</h2>
+          <div class="application__content-picture-wrapper">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+              <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258"
+                height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
+            </picture>
+          </div>
         </div>
         <div class="application__content-wrapper">
           <a href="https://www.apple.com/ru/ios/app-store/" class="application__download-btn">Скачать приложение</a>
@@ -67,8 +83,10 @@
     </section>
     <section class="advantages">
       <h2 class="advantages__headline">
-        <span class="advantages__headline--first-part">Устали от серости мегаполиса?</span>
-        <span class="advantages__headline--second-part">Нам есть, что вам предложить!</span>
+        <span class="advantages__headline-part advantages__headline-part--first-part">Устали от серости
+          мегаполиса?</span>
+        <span class="advantages__headline-part advantages__headline-part--second-part">Нам есть, что вам
+          предложить!</span>
       </h2>
       <div class="advantages__background-wrapper">
         <div class="advantages__content-wrapper">
@@ -81,8 +99,7 @@
             <li class="advantages__description-item">
               <h3 class="advantages__description-headline">Меняет мир вокруг</h3>
               <p class="advantages__description-content">Сделайте снимок и украсьте его смайликом или текстовой
-                подписью,
-                чтобы усилить эффект</p>
+                подписью, чтобы усилить эффект</p>
             </li>
             <li class="advantages__description-item">
               <h3 class="advantages__description-headline">Заводит новых друзей</h3>
@@ -91,89 +108,230 @@
             </li>
           </ul>
           <div class="advantages__iphone-wrapper">
-            <p class="advantages__iphone advantages__iphone--gray"></p>
-            <p class="advantages__iphone advantages__iphone--pink"></p>
-            <p class="advantages__iphone advantages__iphone--smile"></p>
+            <picture>
+              <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x"
+                class="advantages__iphone advantages__iphone--gray" alt="суровая реальность">
+            </picture>
+            <picture>
+              <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x"
+                class="advantages__iphone advantages__iphone--pink" alt="улучшенная реальность">
+            </picture>
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+              <img src="img/iphone-screen-mobile@1x.png" width="157" height="320"
+                srcset="img/iphone-screen-mobile@2x.png 2x" class="advantages__iphone advantages__iphone--smile"
+                alt="жизнь в кайф">
+            </picture>
           </div>
         </div>
       </div>
     </section>
     <section class="effect-time">
+      <h2 class="visually-hidden">Длительность положительного эффекта</h2>
       <div class="effect-time__wrapper">
         <span class="effect-time__picture"
           aria-label="изображение секундомера остановившегося на отметке в 24 часа"></span>
         <div class="effect-time__content-wrapper">
-          <span class="effect-time__headline">Эффект на 24 часа!</span>
+          <span class="effect-time__headline">
+            <span class="effect-time__headline-part-one">Эффект</span>на 24 часа!
+          </span>
           <p class="effect-time__context">Британские ученые провели исследования и доказали, что положительный эффект
             от использования приложения длится целые сутки!</p>
           <a href="#" class="effect-time__link">Узнать больше об исследовании</a>
         </div>
       </div>
     </section>
-    <section class="feedback feedback-slider">
+    <section class="feedback feedback">
       <h2 class="feedback visually-hidden">Отзывы наших пользователей</h2>
       <div class="feedback__content-wrapper">
         <button type="button" class="feedback__arrow feedback__arrow--left"
           aria-label="показать предыдущий комментарий"></button>
-        <ul class="feedback__list slider__list">
-          <li class="feedback__element slider__element">
+        <ul class="feedback__list">
+          <li class="feedback__element">
             <p class="feedback__user">
               <span class="feedback__user-name">Николай Петров</span>
               <span class="feedback__user-age-profession">25 лет, водитель трамвая</span>
             </p>
             <p class="feedback__user-comment">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть
-              на привычные серые вещи! А ещё я
-              познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;</p>
+              на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной
+              фотографии!&#187;</p>
           </li>
         </ul>
         <button type="button" class="feedback__arrow feedback__arrow--right"
           aria-label="показать следующий комментарий"></button>
-        <div class="feedback-slider__switcher-wrapper">
+        <div class="feedback__switcher-wrapper">
           <input type="radio" id="comment-switcher-1" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать новый отзыв" checked>
-          <label for="comment-switcher-1" class="feedback-slider__switcher feedback-slider__switcher--checked"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать новый отзыв" checked>
+          <label for="comment-switcher-1" class="feedback__switcher feedback__switcher--checked"></label>
 
           <input type="radio" id="comment-switcher-2" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать последний отзыв">
-          <label for="comment-switcher-2" class="feedback-slider__switcher"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать последний отзыв">
+          <label for="comment-switcher-2" class="feedback__switcher"></label>
 
           <input type="radio" id="comment-switcher-3" name="switcher comment slider"
-            class="feedback-slider__switcher visually-hidden" aria-label="показать предпоследний отзыв">
-          <label for="comment-switcher-3" class="feedback-slider__switcher"></label>
+            class="feedback__switcher visually-hidden" aria-label="показать предпоследний отзыв">
+          <label for="comment-switcher-3" class="feedback__switcher"></label>
         </div>
       </div>
     </section>
-    <section class="subscription slider">
-      <h2 class="subscription__headline visually-hidden">Прайс на подписку</h2>
-      <span class="subscription__hit-price">хит</span>
-      <table class="subscription__price-table">
-        <tr>
-          <th>Стандарт 3,99 USD</th>
-        </tr>
-        <tr>
-          <td>розовый фильтр</td>
-        </tr>
-        <tr>
-          <td>смайлики</td>
-        </tr>
-        <tr>
-          <td>комментарии</td>
-        </tr>
-      </table>
-      <div class="slider__switcher-wrapper">
-        <button type="button" class="slider__switcher" aria-label="показать предыдущий тариф"></button>
-        <button type="button" class="slider__switcher" aria-label="показать выгодный тариф"></button>
-        <button type="button" class="slider__switcher" aria-label="показать следующий тариф"></button>
+    <section class="tariff-plan">
+      <div class="tariff-plan__content-wrapper">
+        <h2 class="visually-hidden">Прайс на подписку</h2>
+        <table class="tariff-plan__table">
+          <tr>
+            <th class="tariff-plan__table-headline tariff-plan__table-headline--mobile">
+              <span class="tariff-plan__headline-content">
+                пусто <span class="tariff-plan__headline-price">нет цены</span>
+              </span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                База <span class="tariff-plan__headline-price">1,99 USD</span>
+              </span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                Стандарт <span class="tariff-plan__headline-price">3,99 USD</span>
+              </span>
+              <span class="tariff-plan__hit">хит</span>
+            </th>
+            <th class="tariff-plan__table-headline">
+              <span class="tariff-plan__headline-content">
+                Анлим <span class="tariff-plan__headline-price">9,99 USD</span>
+              </span>
+            </th>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Розовый фильтр</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый
+                  фильтр</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый
+                  фильтр</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Розовый
+                  фильтр</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Смайлики</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Смайлики</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Смайлики</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Смайлики</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tariff-plan__table-cell tariff-plan__table-cell--mobile">
+              <span class="tariff-plan__content-inclusive">Комментарии</span>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Комментарии</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-no">Комментарии</span>
+              </div>
+            </td>
+            <td class="tariff-plan__table-cell">
+              <div class="tariff-plan__table-cell-wrapper">
+                <span
+                  class="tariff-plan__content-inclusive tariff-plan__content-inclusive--table tariff-plan__content-inclusive--icon-yes">Комментарии</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="tariff-plan__switcher-wrapper">
+          <input type="radio" id="tariff-plan-switcher-1" name="switcher tariff-plan slider"
+            class="tariff-plan__switcher visually-hidden" aria-label="показать первый тариф">
+          <label for="tariff-plan-switcher-1" class="tariff-plan__switcher"></label>
+
+          <input type="radio" id="tariff-plan-switcher-2" name="switcher tariff-plan slider"
+            class="tariff-plan__switcher visually-hidden" aria-label="показать второй тариф" checked>
+          <label for="tariff-plan-switcher-2" class="tariff-plan__switcher tariff-plan__switcher--checked"></label>
+
+          <input type="radio" id="tariff-plan-switcher-3" name="switcher tariff-plan slider"
+            class="tariff-plan__switcher visually-hidden" aria-label="показать третий тариф">
+          <label for="tariff-plan-switcher-3" class="tariff-plan__switcher"></label>
+        </div>
+      </div>
+    </section>
+    <section class="support-hub">
+      <div class="support-hub__wrapper">
+        <div class="support-hub__wrapper-headline">
+          <h2 class="support-hub__headline">Остались вопросы? Свяжитесь с нами!</h2>
+        </div>
+        <div class="support-hub__wrapper-content">
+          <p class="support-hub__call-back support-hub__content-column">
+            <span class="support-hub__small-headline">Звоните:</span>
+            <a href="tel:88125556666" class="support-hub__accent-content">+7 (812) 555-66-66</a>
+          </p>
+          <p class="support-hub__write-back support-hub__content-column">
+            <span class="support-hub__small-headline">Пишите:</span>
+            <a href="mailto:mail@htmlacademy.ru" class="support-hub__accent-content">mail@htmlacademy.ru</a>
+          </p>
+          <div class="support-hub__come-visit support-hub__content-column">
+            <span class="support-hub__small-headline">Приезжайте в гости:</span>
+            <address class="support-hub__accent-content">ул. Большая Конюшенная, 19/8</address>
+          </div>
+        </div>
+      </div>
+      <div class="support-hub__wrapper-map">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645"
+            class="support-hub_bg-map" alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
+        </picture>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="site-footer__wrapper site-footer__wrapper--index">
-      <a href="index.html" class="site-footer__link-logo">
-        <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
-          alt="Промо-сайт приложения PINK">
+  <footer class="site-footer site-footer--index">
+    <div class="site-footer__wrapper">
+      <a class="site-footer__link-logo">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" class="logo site-footer__logo" width="147" height="40"
+            alt="Промо-сайт приложения PINK">
+        </picture>
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--index">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--twitter">ссылка на twitter</a>
         </li>
@@ -186,10 +344,12 @@
       </ul>
       <div class="created-by">
         <span class="created-by__text">Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link">HTML Academy logo</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link created-by__link--index">HTML
+          Academy logo</a>
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

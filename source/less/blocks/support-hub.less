@@ -1,0 +1,334 @@
+.support-hub {
+  width: 100%;
+  min-height: 645px; // приравниваем высоту саппорт-хаба к высоте карты для мобильных
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.support-hub__wrapper {
+  width: @mobile-width;
+
+  padding: 22px 20px;
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  background-color: @white-color-main;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: "";
+
+    width: 100%;
+    height: 61px;
+
+    position: absolute;
+    bottom: -50px;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 0;
+  }
+}
+
+.support-hub__headline {
+  font-size: @f-size-24;
+  font-weight: @f-weight-low;
+  color: @f-color-main;
+
+  line-height: 30px;
+  text-align: center;
+
+  margin-bottom: 18px;
+}
+
+.support-hub__wrapper-content {
+  padding-left: 1px;
+}
+
+.support-hub__content-column {
+  width: 250px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-hub__call-back {
+  margin-bottom: 24px;
+}
+
+.support-hub__call-back .support-hub__small-headline {
+  margin-bottom: 4px;
+}
+
+.support-hub__write-back {
+  margin-bottom: 27px;
+  margin-left: 2px;
+}
+
+.support-hub__write-back .support-hub__small-headline {
+  margin-bottom: 6px;
+}
+
+.support-hub__come-visit .support-hub__small-headline {
+  margin-bottom: 7px;
+}
+
+.support-hub__small-headline {
+  font-size: @f-size-18;
+  font-weight: @f-weight-high;
+  color: @f-color-main;
+
+  line-height: 20px;
+}
+
+.support-hub__accent-content {
+  font-size: @f-size-24;
+  font-weight: @f-weight-low;
+  color: @f-color-accent;
+  font-style: normal;
+
+  text-align: center;
+}
+
+.support-hub__wrapper-map {
+  width: 320px;
+  height: 645px;
+
+  margin-top: -33px;
+
+  position: absolute;
+  top: 0;
+
+  &::after {
+    width: 36px;
+    height: 36px;
+
+    content: "";
+
+    background-image: url("../img/icon-map-marker.svg");
+    background-size: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    bottom: 70px;
+    right: 142px;
+  }
+}
+
+.support-hub_bg-map {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .support-hub {
+    min-height: 780px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
+
+    z-index: 1;
+  }
+
+  .support-hub__wrapper {
+    width: 100%;
+
+    padding: 47px 0 27px 0;
+
+    top: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      height: 75px;
+
+      bottom: -73px;
+
+      background-size: auto 72px;
+    }
+  }
+
+  .support-hub__wrapper-headline {
+    width: 500px;
+
+    padding: 0;
+
+    margin: 0 0 28px 0;
+  }
+
+  .support-hub__headline {
+    font-size: @f-size-40;
+
+    line-height: 48px;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .support-hub__wrapper-content {
+    width: 625px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .support-hub__content-column {
+    width: 250px;
+
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .support-hub__call-back {
+    margin-right: 20px;
+  }
+
+  .support-hub__call-back .support-hub__small-headline {
+    margin-bottom: 7px;
+  }
+
+  .support-hub__write-back .support-hub__small-headline {
+    margin-bottom: 9px;
+  }
+
+  .support-hub__come-visit .support-hub__small-headline {
+    margin-bottom: 8px;
+  }
+
+  .support-hub__come-visit .support-hub__accent-content {
+    line-height: 29px;
+  }
+
+  .support-hub__wrapper-map {
+    width: 700px;
+    height: 815px;
+
+    overflow: hidden;
+
+    &::after {
+      bottom: 148px;
+      right: 332px;
+    }
+  }
+
+  .support-hub_bg-map {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 91px;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .support-hub {
+    min-height: 789px; // приравниваем высоту саппорт-хаба к высоте карты для десктопа
+
+    overflow: visible;
+  }
+
+  .support-hub__wrapper {
+    padding: 65px 0 14px 0;
+
+    top: -77px;
+
+    &::after {
+      height: 150px;
+
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-size: auto 110px;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+
+      transform: scaleX(1.22);
+
+      bottom: -143px;
+    }
+  }
+
+  .support-hub__wrapper-headline {
+    margin-bottom: 57px;
+  }
+
+  .support-hub__headline {
+    font-size: @f-size-50;
+
+    line-height: 60px;
+  }
+
+  .support-hub__wrapper-content {
+    width: 890px;
+
+    justify-content: space-between;
+  }
+
+  .support-hub__content-column {
+    min-height: 110px;
+
+    margin: 0;
+  }
+
+  .support-hub__come-visit {
+    margin: 0 69px;
+  }
+
+  .support-hub__call-back .support-hub__small-headline {
+    margin-bottom: 25px;
+  }
+
+  .support-hub__write-back .support-hub__small-headline {
+    margin-bottom: 27px;
+  }
+
+  .support-hub__come-visit .support-hub__small-headline {
+    margin-bottom: 25px;
+  }
+
+  .support-hub__come-visit .support-hub__accent-content {
+    line-height: 29px;
+  }
+
+  .support-hub__write-back {
+    order: 1;
+  }
+
+  .support-hub__wrapper-map {
+    width: 1200px;
+    height: 875px;
+
+    top: -50px;
+
+    &::after {
+      bottom: 204px;
+      right: 583px;
+    }
+  }
+
+  .support-hub_bg-map {
+    position: absolute;
+    top: 95px;
+    left: -1px;
+  }
+}
