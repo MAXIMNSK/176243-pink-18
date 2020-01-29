@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/style.min.css">-->
 </head>
 
 <body>
@@ -46,16 +47,20 @@
   </header>
   <main class="site-main">
     <h1 class="site-main__headline visually-hidden">Раскрась свои серые будни в розовый цвет с приложением PINK!</h1>
+
     <section class="application">
       <div class="application__wrapper">
         <div class="application__introduction">
           <h2 class="application__headline">Взгляните на жизнь иначе!</h2>
           <div class="application__content-picture-wrapper">
             <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+              <source media="(min-width: 960px)" type="image/webp" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+
+              <source media="(min-width: 660px)" type="image/webp" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+
+              <source media="(max-width: 660px)" type="image/webp" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x">
               <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258"
                 height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
             </picture>
@@ -81,6 +86,7 @@
         </div>
       </div>
     </section>
+
     <section class="advantages">
       <h2 class="advantages__headline">
         <span class="advantages__headline-part advantages__headline-part--first-part">Устали от серости
@@ -109,21 +115,32 @@
           </ul>
           <div class="advantages__iphone-wrapper">
             <picture>
+              <source media="(min-width: 960px)" type="image/webp"
+                srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
               <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x"
                 class="advantages__iphone advantages__iphone--gray" alt="суровая реальность">
             </picture>
             <picture>
+              <source media="(min-width: 960px)" type="image/webp"
+                srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
               <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x"
                 class="advantages__iphone advantages__iphone--pink" alt="улучшенная реальность">
             </picture>
             <picture>
+              <source media="(min-width: 960px)" type="image/webp"
+                srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
               <source media="(min-width: 960px)"
                 srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+
+              <source media="(min-width: 660px)" type="image/webp"
+                srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
               <source media="(min-width: 660px)"
                 srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
-              <img src="img/iphone-screen-mobile@1x.png" width="157" height="320"
-                srcset="img/iphone-screen-mobile@2x.png 2x" class="advantages__iphone advantages__iphone--smile"
-                alt="жизнь в кайф">
+
+              <source media="(max-width: 660px)" type="image/webp"
+                srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
+              <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157"
+                height="320" class="advantages__iphone advantages__iphone--smile" alt="жизнь в кайф">
             </picture>
           </div>
         </div>
@@ -144,8 +161,8 @@
         </div>
       </div>
     </section>
-    <section class="feedback feedback">
-      <h2 class="feedback visually-hidden">Отзывы наших пользователей</h2>
+    <section class="feedback">
+      <h2 class="visually-hidden">Отзывы наших пользователей</h2>
       <div class="feedback__content-wrapper">
         <button type="button" class="feedback__arrow feedback__arrow--left"
           aria-label="показать предыдущий комментарий"></button>
@@ -294,31 +311,43 @@
     </section>
     <section class="support-hub">
       <div class="support-hub__wrapper">
-        <div class="support-hub__wrapper-headline">
-          <h2 class="support-hub__headline">Остались вопросы? Свяжитесь с нами!</h2>
-        </div>
-        <div class="support-hub__wrapper-content">
-          <p class="support-hub__call-back support-hub__content-column">
-            <span class="support-hub__small-headline">Звоните:</span>
-            <a href="tel:88125556666" class="support-hub__accent-content">+7 (812) 555-66-66</a>
-          </p>
-          <p class="support-hub__write-back support-hub__content-column">
-            <span class="support-hub__small-headline">Пишите:</span>
-            <a href="mailto:mail@htmlacademy.ru" class="support-hub__accent-content">mail@htmlacademy.ru</a>
-          </p>
-          <div class="support-hub__come-visit support-hub__content-column">
-            <span class="support-hub__small-headline">Приезжайте в гости:</span>
-            <address class="support-hub__accent-content">ул. Большая Конюшенная, 19/8</address>
+        <div class="support-hub__content-wrapper">
+          <div class="support-hub__wrapper-headline">
+            <h2 class="support-hub__headline">Остались вопросы? Свяжитесь с нами!</h2>
+          </div>
+          <div class="support-hub__wrapper-content">
+            <p class="support-hub__call-back support-hub__content-column">
+              <span class="support-hub__small-headline">Звоните:</span>
+              <a href="tel:88125556666" class="support-hub__accent-content">+7 (812) 555-66-66</a>
+            </p>
+            <p class="support-hub__write-back support-hub__content-column">
+              <span class="support-hub__small-headline">Пишите:</span>
+              <a href="mailto:mail@htmlacademy.ru" class="support-hub__accent-content">mail@htmlacademy.ru</a>
+            </p>
+            <div class="support-hub__come-visit support-hub__content-column">
+              <span class="support-hub__small-headline">Приезжайте в гости:</span>
+              <address class="support-hub__accent-content">ул. Большая Конюшенная, 19/8</address>
+            </div>
           </div>
         </div>
       </div>
-      <div class="support-hub__wrapper-map">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645"
-            class="support-hub_bg-map" alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
-        </picture>
+      <div class="support-hub__container-map">
+        <div class="support-hub__wrapper-map">
+          <picture>
+            <source media="(min-width: 960px)" type="image/webp"
+              srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+
+            <source media="(min-width: 660px)" type="image/webp"
+              srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+
+            <source media="(max-width: 660px)" type="image/webp"
+              srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645"
+              class="support-hub_bg-map" alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
+          </picture>
+        </div>
       </div>
     </section>
   </main>
@@ -343,13 +372,15 @@
         </li>
       </ul>
       <div class="created-by">
-        <span class="created-by__text">Разработано</span>
+        <span class="created-by__text created-by__text--index">Разработано</span>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="created-by__link created-by__link--index">HTML
           Academy logo</a>
       </div>
     </div>
   </footer>
+  -->
   <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>

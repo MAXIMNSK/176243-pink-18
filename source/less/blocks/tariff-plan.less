@@ -2,12 +2,17 @@
 .tariff-plan {
   width: 100%;
 
-  padding: 89px 0 48px 0;
+  padding: 88px 0 48px 0;
 
   background-color: @bg-color-light;
 
   display: flex;
   justify-content: center;
+
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% -35px;
 }
 
 .tariff-plan__content-wrapper {
@@ -89,7 +94,7 @@
   font-size: @f-size-14;
   text-transform: uppercase;
 
-  padding: 21px;
+  padding: 21px 21px 21px 22px;
 
   background-color: @white-color-main;
 
@@ -185,9 +190,14 @@
 
 @media (min-width: @tablet-width) {
   .tariff-plan {
-    padding: 107px 0 157px 0;
+    padding: 106px 0 157px 0;
 
     margin: -21px 0 -130px 0;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% -1px;
   }
 
   .tariff-plan__content-wrapper {
@@ -195,7 +205,7 @@
   }
 
   .tariff-plan__table-headline {
-    width: 154px;
+    width: 155px;
 
     padding: 10px 0 16px 0;
 
@@ -204,6 +214,10 @@
 
       visibility: hidden;
     }
+  }
+
+  .tariff-plan__headline-zero {
+    outline: none;
   }
 
   .tariff-plan__headline-content {
@@ -233,7 +247,7 @@
 
     text-transform: none;
 
-    padding: 10px 10px 10px 13px;
+    padding: 10px 10px 10px 15px;
 
     &--mobile {
       display: table-cell;
@@ -258,7 +272,7 @@
       background-image: url("../img/icon-yes.svg");
       background-size: 31px 21px;
       background-repeat: no-repeat;
-      background-position: 50%;
+      background-position: -2px 0;
 
       display: block;
 
@@ -276,7 +290,7 @@
       background-image: url("../img/icon-no.svg");
       background-size: 27px 26px;
       background-repeat: no-repeat;
-      background-position: 50%;
+      background-position: -2px 0;
 
       display: block;
 
@@ -296,6 +310,11 @@
     padding: 166px 0 132px 0;
 
     margin-bottom: 0;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 9px;
   }
 
   .tariff-plan__content-wrapper {

@@ -1,14 +1,10 @@
 // блок с информацией о фирме написавшей сайт
 .created-by {
-  width: 130px;
+  position: relative;
 
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  &--gallery {
-    margin-top: -2px;
-  }
 }
 
 .created-by__text {
@@ -16,98 +12,99 @@
   font-size: @f-size-14;
   font-weight: @f-weight-normal;
 
-  margin-right: 12px;
+  &--gallery {
+    padding: 8px 42px 0 0;
+  }
 
   &--challenge {
-    margin-top: -3px;
+    padding: 0 42px 0 0;
   }
 }
 
 .created-by__link {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 
   font-size: 0;
 
-  display: block;
-
   background-image: url("../img/htmlacademy.svg");
-  background-size: 40px auto;
+  background-size: 40px;
   background-repeat: no-repeat;
   background-position: 50%;
 
+  position: absolute;
+  top: 0;
+  right: 0;
+
   &--gallery {
-    background-position: -4px -1px;
+    top: -2px;
+    right: -6px;
   }
 
   &--challenge {
-    background-position: -4px -2px;
+    top: -10px;
+    right: -7px;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .created-by {
-    width: min-content;
-
-    padding: 0 0 0 12px;
-
-    margin-top: 13px;
-
-    &--gallery {
-      padding-left: 1px;
-    }
-  }
-
   .created-by__text {
-    margin-top: 1px;
-    margin-right: 6px;
+    &--index {
+      padding: 14px 41px 0 0;
+    }
 
     &--gallery {
-      margin-right: 2px;
+      padding: 13px 41px 0 0;
+    }
+
+    &--challenge {
+      padding: 0 41px 0 0;
+
+      margin: 13px 0 0 0;
     }
   }
 
   .created-by__link {
-    background-size: 40px auto;
-    background-position: 3px -2px;
-
-    margin-top: 4px;
-
     &--index {
-      background-position: 2px -2px;
+      top: 4px;
+      right: -7px;
     }
 
     &--gallery {
-      min-width: 40px;
-      min-height: 40px;
-
-      background-position: 7px 0;
+      top: 3px;
+      right: -7px;
     }
 
     &--challenge {
-      background-position: 2px -2px;
+      top: 2px;
+      right: -7px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .created-by {
-    width: max-content;
-
-    padding: 2px 0 0 0;
-  }
-
   .created-by__text {
     font-size: @f-size-18;
 
-    margin-top: -2px;
+    &--index {
+      padding: 11px 41px 0 0;
+    }
   }
 
   .created-by__link {
-    background-position: 1px -2px;
+    &--index {
+      top: 5px;
+      right: -7px;
+    }
 
     &--gallery {
-      background-position: 6px 1px;
+      top: 7px;
+      right: -6px;
+    }
+
+    &--challenge {
+      top: 6px;
+      right: -6px;
     }
   }
 }

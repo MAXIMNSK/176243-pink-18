@@ -2,25 +2,29 @@
   width: 100%;
   min-height: 645px; // приравниваем высоту саппорт-хаба к высоте карты для мобильных
 
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-hub__wrapper {
+  width: 100%;
+
+  z-index: 1;
+
+  background-color: @white-color-main;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow: hidden;
 }
 
-.support-hub__wrapper {
+.support-hub__content-wrapper {
   width: @mobile-width;
 
-  padding: 22px 20px;
+  padding: 22px 20px 22px 22px;
 
-  position: absolute;
-  top: 0;
-  z-index: 1;
-
-  background-color: @white-color-main;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -29,10 +33,11 @@
   &::after {
     content: "";
 
-    width: 100%;
+    width: @mobile-width;
     height: 61px;
 
     position: absolute;
+    left: 0;
     bottom: -50px;
 
     background-image: url("../img/bg-triangle-white-footer.svg");
@@ -43,6 +48,8 @@
 }
 
 .support-hub__headline {
+  width: @mobile-width;
+
   font-size: @f-size-24;
   font-weight: @f-weight-low;
   color: @f-color-main;
@@ -88,6 +95,10 @@
   margin-bottom: 7px;
 }
 
+.support-hub__come-visit .support-hub__accent-content {
+  width: 250px;
+}
+
 .support-hub__small-headline {
   font-size: @f-size-18;
   font-weight: @f-weight-high;
@@ -105,14 +116,13 @@
   text-align: center;
 }
 
-.support-hub__wrapper-map {
-  width: 320px;
-  height: 645px;
+.support-hub__container-map {
+  width: @mobile-width;
+  height: 217px;
 
-  margin-top: -33px;
+  position: relative;
 
-  position: absolute;
-  top: 0;
+  overflow: hidden;
 
   &::after {
     width: 36px;
@@ -126,52 +136,60 @@
     background-repeat: no-repeat;
 
     position: absolute;
-    bottom: 70px;
-    right: 142px;
+    bottom: 69px;
+    right: 141px;
   }
+}
+
+.support-hub__wrapper-map {
+  width: 320px;
+  height: 100%;
+
+  position: relative;
 }
 
 .support-hub_bg-map {
   width: 100%;
   height: auto;
+
+  position: absolute;
+  top: -427px;
+  left: 1px;
 }
 
 @media (min-width: @tablet-width) {
   .support-hub {
     min-height: 780px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
-
-    z-index: 1;
   }
 
-  .support-hub__wrapper {
-    width: 100%;
+  .support-hub__content-wrapper {
+    width: @tablet-width;
 
-    padding: 47px 0 27px 0;
-
-    top: 0;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 47px 0 29px 0;
 
     &::after {
-      height: 75px;
+      width: @tablet-width;
+      height: 80px;
 
-      bottom: -73px;
+      left: 0;
+      bottom: -79px;
 
-      background-size: auto 72px;
+      background-size: @tablet-width auto;
+      background-position: 50% 0;
     }
   }
 
   .support-hub__wrapper-headline {
-    width: 500px;
+    width: 100%;
 
-    padding: 0;
+    padding: 0 100px;
 
-    margin: 0 0 28px 0;
+    margin: 0 0 29px 0;
   }
 
   .support-hub__headline {
+    width: 100%;
+
     font-size: @f-size-40;
 
     line-height: 48px;
@@ -182,7 +200,7 @@
   }
 
   .support-hub__wrapper-content {
-    width: 625px;
+    width: 623px;
 
     display: flex;
     flex-direction: row;
@@ -220,66 +238,78 @@
     line-height: 29px;
   }
 
-  .support-hub__wrapper-map {
-    width: 700px;
-    height: 815px;
-
-    overflow: hidden;
+  .support-hub__container-map {
+    width: @tablet-width;
+    height: 372px;
 
     &::after {
-      bottom: 148px;
-      right: 332px;
+      bottom: 143px;
+      right: 312px;
     }
+  }
+
+  .support-hub__wrapper-map {
+    width: 700px;
+    height: 848px;
   }
 
   .support-hub_bg-map {
     width: 100%;
     height: auto;
 
-    position: absolute;
-    top: 91px;
-    left: 0;
+    top: -348px;
+    left: -20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .support-hub {
-    min-height: 789px; // приравниваем высоту саппорт-хаба к высоте карты для десктопа
+    max-width: 1200px;
+    min-width: @desktop-width;
+    width: 100%;
 
     overflow: visible;
   }
 
   .support-hub__wrapper {
-    padding: 65px 0 14px 0;
+    width: 100%;
 
-    top: -77px;
+    margin-top: -75px;
+  }
+
+  .support-hub__content-wrapper {
+    width: 100%;
+
+    padding: 63px 20px 15px 19px;
 
     &::after {
+      width: 100%;
       height: 150px;
 
+      left: 0;
+      bottom: -150px;
+
       background-image: url("../img/bg-triangle-white-footer.svg");
-      background-size: auto 110px;
-      background-position: 50% 0;
-      background-repeat: no-repeat;
-
-      transform: scaleX(1.22);
-
-      bottom: -143px;
+      background-size: 100% 69%;
     }
   }
 
   .support-hub__wrapper-headline {
+    width: 800px;
+
     margin-bottom: 57px;
   }
 
   .support-hub__headline {
+    width: 100%;
+
     font-size: @f-size-50;
 
     line-height: 60px;
   }
 
   .support-hub__wrapper-content {
-    width: 890px;
+    width: auto;
 
     justify-content: space-between;
   }
@@ -295,11 +325,11 @@
   }
 
   .support-hub__call-back .support-hub__small-headline {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 
   .support-hub__write-back .support-hub__small-headline {
-    margin-bottom: 27px;
+    margin-bottom: 29px;
   }
 
   .support-hub__come-visit .support-hub__small-headline {
@@ -314,21 +344,28 @@
     order: 1;
   }
 
-  .support-hub__wrapper-map {
-    width: 1200px;
-    height: 875px;
-
-    top: -50px;
+  .support-hub__container-map {
+    max-width: 1200px;
+    min-width: @desktop-width;
+    width: 100%;
+    height: 502px;
 
     &::after {
-      bottom: 204px;
+      bottom: 201px;
       right: 583px;
     }
   }
 
+  .support-hub__wrapper-map {
+    width: 1200px;
+    height: auto;
+  }
+
   .support-hub_bg-map {
-    position: absolute;
-    top: 95px;
+    width: 100%;
+    height: auto;
+
+    top: -278px;
     left: -1px;
   }
 }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/style.min.css">-->
 </head>
 
 <body>
@@ -57,14 +58,25 @@
       <h2 class="gallery__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
         ваших?</h2>
       <div class="gallery__panorama">
-        <a href="https://via.placeholder.com/150x150">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" class="gallery__photo"
-              alt="лучшая фото-панорама дня, выложенная пользователем">
-          </picture>
-        </a>
+        <div class="gallery__panorama-picture-wrapper">
+          <a href="https://via.placeholder.com/150x150" class="gallery__panorama-picture-link">
+            <picture>
+              <source media="(min-width: 960px)" type="image/webp"
+                srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+              <source media="(min-width: 960px)"
+                srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 660px)" type="image/webp"
+                srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+
+              <source media="(max-width: 660px)" type="image/webp"
+                srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+              <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137"
+                class="gallery__photo gallery__photo--panorama" alt="лучшая фото-панорама дня, выложенная пользователем">
+            </picture>
+          </a>
+        </div>
         <div class="gallery__content-wrapper gallery__content-wrapper--panorama">
           <span class="gallery__best-photo">Панорама дня</span>
           <p class="gallery__username-publication-time gallery__username-publication-time--panorama">
@@ -77,8 +89,7 @@
             вопросы!
           </p>
           <div class="gallery__like gallery__like--panorama">
-            <button type="button" class="gallery__like-icon gallery__like-icon--panorama"
-              aria-label="лайк - если понравилось фото"></button>
+            <button type="button" class="gallery__like-icon gallery__like-icon--panorama" aria-label="лайк - если понравилось фото"></button>
             <span class="gallery__like-count gallery__like-count--panorama">нравится: 215</span>
           </div>
         </div>
@@ -88,12 +99,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-                <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180"
+                  class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -113,12 +132,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="iamge/webp"
+                  srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="iamge/webp"
+                  srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-                <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280"
+                  height="180" class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -138,12 +165,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-                <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+                <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280"
+                  height="180" class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -163,12 +198,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-                <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+                <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280"
+                  height="180" class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -188,12 +231,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-                <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+                <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180"
+                  class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -213,12 +264,20 @@
           <li class="gallery__item">
             <a href="https://via.placeholder.com/150x150">
               <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
                 <source media="(min-width: 960px)"
                   srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
                 <source media="(min-width: 660px)"
                   srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-                <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" class="gallery__photo"
-                  alt="фото выложенное пользователем">
+
+                <source media="(max-width: 660px)" type="image/webp"
+                  srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280"
+                  height="180" class="gallery__photo" alt="фото выложенное пользователем">
               </picture>
             </a>
             <div class="gallery__content-wrapper">
@@ -249,12 +308,20 @@
       <form class="photo-loader__form">
         <div class="photo-loader__wrapper-photo">
           <picture>
+            <source media="(min-width: 960px)" type="image/webp"
+              srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
             <source media="(min-width: 960px)"
               srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+
+            <source media="(min-width: 660px)" type="image/webp"
+              srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
             <source media="(min-width: 660px)"
               srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-            <img src="img/photo-road-desktop@1x.jpg" width="280" height="374" class="photo-loader__photo"
-              alt="сюда можно загрузить фотографию">
+
+            <source media="(max-width: 660px)" type="image/webp"
+              srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@1x.webp 2x">
+            <img src="img/photo-road-desktop@1x.jpg" srcset="img/photo-road-desktop@2x.jpg 2x" width="280" height="374"
+              class="photo-loader__photo" alt="сюда можно загрузить фотографию">
           </picture>
         </div>
         <div class="photo-loader__wrapper-editor">
@@ -324,6 +391,7 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>
