@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -52,12 +52,14 @@
           <h2 class="application__headline">Взгляните на жизнь иначе!</h2>
           <div class="application__content-picture-wrapper">
             <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-              <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258"
-                height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
+              <source media="(min-width: 960px)" type='image/webp' srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+
+              <source media="(min-width: 660px)" type='image/webp' srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+
+              <source media='(max-width: 660px)' type='image/webp' src='img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x'>
+              <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" class="application__use" alt="пример преобразования серой жизни, в жизнь с PINK">
             </picture>
           </div>
         </div>
@@ -109,21 +111,22 @@
           </ul>
           <div class="advantages__iphone-wrapper">
             <picture>
-              <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x"
-                class="advantages__iphone advantages__iphone--gray" alt="суровая реальность">
+              <source media='(min-width: 960px)' type='image/webp' srcset='img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x'>
+              <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" class="advantages__iphone advantages__iphone--gray" alt="суровая реальность">
             </picture>
             <picture>
-              <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x"
-                class="advantages__iphone advantages__iphone--pink" alt="улучшенная реальность">
+              <source media='(min-width: 960px)' type='image/webp' srcset='img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x'>
+              <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" class="advantages__iphone advantages__iphone--pink" alt="улучшенная реальность">
             </picture>
             <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
-              <img src="img/iphone-screen-mobile@1x.png" width="157" height="320"
-                srcset="img/iphone-screen-mobile@2x.png 2x" class="advantages__iphone advantages__iphone--smile"
-                alt="жизнь в кайф">
+              <source media="(min-width: 960px)" type='image/webp' srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+
+              <source media="(min-width: 660px)" type='image/webp' srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+
+              <source media='(max-width: 660px)' type='image/webp' srcset='img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x'>
+              <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" class="advantages__iphone advantages__iphone--smile" alt="жизнь в кайф">
             </picture>
           </div>
         </div>
@@ -317,10 +320,14 @@
       <div class="support-hub__container-map">
         <div class="support-hub__wrapper-map">
           <picture>
+            <source media="(min-width: 960px)" type='image/webp' srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+
+            <source media="(min-width: 660px)" type='image/webp' srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645"
-              class="support-hub_bg-map" alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
+
+            <source media='(max-width: 660px)' type='image/webp' srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+            <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="645" class="support-hub_bg-map" alt="карта с отметкой адреса О Хулиганс Паб, Невский проспект 20">
           </picture>
         </div>
       </div>
