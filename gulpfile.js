@@ -22,6 +22,20 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css/"))
+    .pipe(server.stream());
+});
+
+// проверяем и минифицируем файл
+gulp.task("cssMinificator", function () {
+  return gulp.src("build/css/*.css")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(cssMinificator())                             // css minificator
     .pipe(changeName("style.min.css"))                      // rename minification file
     .pipe(sourcemap.write("."))
@@ -98,7 +112,7 @@ gulp.task("server", function () {
   //gulp.watch("source/*.html").on("change", server.reload);
 
   // custom:
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "cssMinificator"));
   gulp.watch("source/*.html", gulp.series("copyHtml"));
   gulp.watch("source/img/*.{png,jpg,svg,webp}", gulp.series("deleteBuildImg", "imageO", "copySvg", "toWebp"))
   gulp.watch("source/*.html").on("change", server.reload)
@@ -109,6 +123,6 @@ gulp.task("refresh", function(done) {
   done()
 });
 
-gulp.task("build", gulp.series("deleteBuild", "deleteTemp", "css", "imageO", "copyPngoJpgo", "copySvg", "toWebp", "copyHtml", "copyJS", "copyFonts", "deleteTemp", "server"));
+gulp.task("build", gulp.series("deleteBuild", "deleteTemp", "css", "cssMinificator", "imageO", "copyPngoJpgo", "copySvg", "toWebp", "copyHtml", "copyJS", "copyFonts", "deleteTemp"));
 
-//gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series("build", "server"));

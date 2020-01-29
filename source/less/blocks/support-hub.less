@@ -2,13 +2,9 @@
   width: 100%;
   min-height: 645px; // приравниваем высоту саппорт-хаба к высоте карты для мобильных
 
-  position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow: hidden;
 }
 
 .support-hub__wrapper {
@@ -42,7 +38,7 @@
 
     position: absolute;
     left: 0;
-    bottom: -51px;
+    bottom: -50px;
 
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
@@ -147,7 +143,7 @@
 
 .support-hub__wrapper-map {
   width: 320px;
-  height: 645px;
+  height: 100%;
 
   position: relative;
 }
@@ -164,26 +160,20 @@
 @media (min-width: @tablet-width) {
   .support-hub {
     min-height: 780px; // приравниваем высоту саппорт-хаба к высоте карты для планшетов
-
-    z-index: 1;
   }
 
   .support-hub__content-wrapper {
     width: @tablet-width;
 
-    padding: 46px 0 29px 0;
+    padding: 47px 0 29px 0;
 
     &::after {
-      content: "";
-
       width: @tablet-width;
       height: 80px;
 
       left: 0;
-      bottom: -80px;
+      bottom: -79px;
 
-      background-image: url("../img/bg-triangle-white-footer.svg");
-      background-repeat: no-repeat;
       background-size: @tablet-width auto;
       background-position: 50% 0;
     }
@@ -253,16 +243,14 @@
     height: 372px;
 
     &::after {
-      bottom: 144px;
+      bottom: 143px;
       right: 312px;
     }
   }
 
   .support-hub__wrapper-map {
     width: 700px;
-    height: 812px;
-
-    position: relative;
+    height: 848px;
   }
 
   .support-hub_bg-map {
@@ -276,54 +264,52 @@
 
 @media (min-width: @desktop-width) {
   .support-hub {
-    min-height: 789px; // приравниваем высоту саппорт-хаба к высоте карты для десктопа
+    max-width: 1200px;
+    min-width: @desktop-width;
+    width: 100%;
 
     overflow: visible;
   }
 
   .support-hub__wrapper {
+    width: 100%;
+
     margin-top: -75px;
   }
 
   .support-hub__content-wrapper {
-    width: 1200px;
+    width: 100%;
 
     padding: 63px 20px 15px 19px;
 
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     &::after {
-      width: 1200px;
+      width: 100%;
       height: 150px;
 
       left: 0;
-      bottom: -136px;
+      bottom: -150px;
 
       background-image: url("../img/bg-triangle-white-footer.svg");
-      background-size: 1200px auto;
-
-      transform: scaleY(0.82);
+      background-size: 100% 69%;
     }
   }
 
   .support-hub__wrapper-headline {
+    width: 800px;
+
     margin-bottom: 57px;
   }
 
   .support-hub__headline {
+    width: 100%;
+
     font-size: @f-size-50;
 
     line-height: 60px;
-
-    padding: 0 200px;
   }
 
   .support-hub__wrapper-content {
-    width: 890px;
+    width: auto;
 
     justify-content: space-between;
   }
@@ -359,7 +345,9 @@
   }
 
   .support-hub__container-map {
-    width: 1200px;
+    max-width: 1200px;
+    min-width: @desktop-width;
+    width: 100%;
     height: 502px;
 
     &::after {
