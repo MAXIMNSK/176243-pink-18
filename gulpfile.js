@@ -36,8 +36,8 @@ gulp.task("cssMinificator", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(cssMinificator())                             // css minificator
-    .pipe(changeName("style.min.css"))                      // rename minification file
+    .pipe(cssMinificator())
+    .pipe(changeName("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css/"))
     .pipe(server.stream());
