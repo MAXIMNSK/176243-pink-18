@@ -84,7 +84,8 @@
 }
 
 .gallery__content-wrapper {
-  width: 100%;
+  // где 40 - отступы от границ списка (для ie)
+  width: @mobile-width - 40;
 
   padding: 22px 18px 36px 18px;
 
@@ -218,7 +219,7 @@
   }
 
   .gallery__like {
-    width: 100%;
+    width: 300px;
 
     padding: 0 30px 0 28px;
 
